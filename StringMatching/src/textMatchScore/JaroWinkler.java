@@ -1,6 +1,6 @@
 package textMatchScore;
 
-public class JaroWinkler {
+public class JaroWinkler implements TextMatchScore{
 	private String compOne;
     private String compTwo;
  
@@ -124,4 +124,9 @@ public class JaroWinkler {
         }
         return cp;
     }
+
+	@Override
+	public double getScore() {
+		return getSimilarity(compOne,compTwo);
+	}
 }

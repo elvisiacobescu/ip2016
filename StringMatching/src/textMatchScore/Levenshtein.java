@@ -1,6 +1,6 @@
 package textMatchScore;
 
-public class Levenshtein {
+public class Levenshtein implements TextMatchScore{
 	private String compOne;
     private String compTwo;
     private int[][] matrix;
@@ -12,7 +12,11 @@ public class Levenshtein {
         compTwo = two;
     }
  
-    public int getSimilarity(){
+    public Levenshtein() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getSimilarity(){
         if (!calculated){
             setupMatrix();
         }
@@ -76,4 +80,9 @@ public class Levenshtein {
             System.out.println();
         }
     }
+
+	@Override
+	public double getScore() {
+		return this.getSimilarity();
+	}
 }

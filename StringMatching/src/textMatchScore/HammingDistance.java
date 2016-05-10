@@ -1,12 +1,16 @@
 package textMatchScore;
 
-public class HammingDistance {
+public class HammingDistance implements TextMatchScore{
 	private String compOne;
 	private String compTwo;
 
 	public HammingDistance(String one, String two){
 		compOne = one;
 		compTwo = two;
+	}
+
+	public HammingDistance() {
+		// TODO Auto-generated constructor stub
 	}
 
 	///
@@ -82,6 +86,11 @@ public class HammingDistance {
 		}
 		
 		return true;
+	}
+
+	@Override
+	public double getScore() {
+		return this.getHammingDistance();
 	}
 
 }
