@@ -1,8 +1,8 @@
-package textAligner;
+package textaligner;
 
 import jaligner.matrix.Matrix;
 
-public final class NeedlemanWunsch {
+public final class NeedlemanWunsch implements TextAligner {
     /**
      * Hidden constructor
      */
@@ -12,7 +12,7 @@ public final class NeedlemanWunsch {
 
     /**
      * Aligns two sequences by Needleman-Wunsch (global)
-     * 
+     *
      * @param s1
      *            sequene #1 ({@link Sequence})
      * @param s2
@@ -67,7 +67,7 @@ public final class NeedlemanWunsch {
 
     /**
      * Constructs directions matrix for the traceback.
-     * 
+     *
      * @param s1
      *            sequence #1
      * @param s2
@@ -78,7 +78,7 @@ public final class NeedlemanWunsch {
      *            gap penalty
      * @param pointers
      *            traceback matrix
-     * 
+     *
      * @return The cell where the traceback starts.
      */
     private static Cell construct(Sequence s1, Sequence s2, float[][] matrix,
@@ -143,7 +143,7 @@ public final class NeedlemanWunsch {
     /**
      * Returns the alignment of two sequences based on the passed array of
      * pointers
-     * 
+     *
      * @param s1
      *            sequence #1
      * @param s2
@@ -239,7 +239,7 @@ public final class NeedlemanWunsch {
 
     /**
      * Returns the maximum of two float numbers.
-     * 
+     *
      * @param a
      *            float #1
      * @param b
@@ -258,7 +258,7 @@ public final class NeedlemanWunsch {
 
     /**
      * Reverses an array of chars
-     * 
+     *
      * @param a
      * @param len
      * @return the input array of char reserved

@@ -1,3 +1,5 @@
+package textaligner;
+
 import jaligner.*;
 import jaligner.matrix.*;
 
