@@ -1,9 +1,11 @@
 package factory;
 
-import textAligner.TextAligner;
+
 import textMatchScore.TextMatchScore;
+import textAligner.TextAligner;
+
 
 public abstract class AbstractFactory {
-	abstract TextMatchScore getTextMatchScore(String algorithm );
-	abstract TextAligner getTextAligner(String algorithm );
+	public abstract TextMatchScore getTextMatchScore(String algorithm,String str1, String str2 );
+	public abstract TextAligner getTextAligner(String algorithm,String str1, String str2 );
 }

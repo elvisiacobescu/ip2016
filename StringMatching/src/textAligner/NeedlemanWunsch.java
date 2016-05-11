@@ -6,7 +6,7 @@ public final class NeedlemanWunsch implements TextAligner {
     /**
      * Hidden constructor
      */
-    private NeedlemanWunsch() {
+    public NeedlemanWunsch() {
         super();
     }
 

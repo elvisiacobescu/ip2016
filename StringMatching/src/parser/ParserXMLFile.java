@@ -1,3 +1,4 @@
+package parser;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class ParserXMLFile {
 
 	private List<String> paragraphs;
 
-	ParserXMLFile (String fileName){
+	public ParserXMLFile (String fileName){
 		paragraphs = new ArrayList<String>();
 		this.init(fileName);
 	}

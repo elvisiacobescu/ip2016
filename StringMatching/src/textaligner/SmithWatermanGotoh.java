@@ -1,9 +1,9 @@
-package textaligner;
+package textAligner;
 
 import jaligner.*;
 import jaligner.matrix.*;
 
-class TextAligner {
+public class SmithWatermanGotoh implements TextAligner {
     private String firstString;
     private String secondString;
     private Sequence firstSequence;
@@ -13,10 +13,10 @@ class TextAligner {
     private int firstStart;
     private int secondStart;
 
-    TextAligner() {
+    SmithWatermanGotoh() {
     }
 
-    TextAligner(String firstString, String secondString) {
+    public SmithWatermanGotoh(String firstString, String secondString) {
         this.firstString = firstString;
         this.secondString = secondString;
     }

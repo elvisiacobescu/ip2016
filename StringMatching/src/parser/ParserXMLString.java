@@ -1,3 +1,5 @@
+package parser;
+
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +31,8 @@ public class ParserXMLString {
 			for (int temp = 0; temp < nList.getLength(); temp++) {
 				
 				Node nNode = nList.item(temp);
-				paragraphs.add(nNode.getTextContent());
+				TextNormalizer sanitizedText = new TextNormalizer(nNode.getTextContent());
+				paragraphs.add(sanitizedText.getClearedText());
 			}
 			
 		} catch (Exception e) {
