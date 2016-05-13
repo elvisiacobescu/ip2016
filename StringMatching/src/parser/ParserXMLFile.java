@@ -1,59 +1,70 @@
 package parser;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Node;
 import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class ParserXMLFile {
 
-	private List<Paragraph> paragraphs;
+    private List<Paragraph> paragraphs;
 
-	public ParserXMLFile (String fileName){
-		paragraphs = new ArrayList<Paragraph>();
-		this.init(fileName);
-	}
+    public ParserXMLFile (String fileName) throws AlignmentParserException {
+        paragraphs = new ArrayList<Paragraph>();
+        findParagraphs(fileName);
+    }
 
-	private void init(String fileName) {
-		try {
-			File inputFile = new File(fileName);
+    /**
+     * This is the main method which does the splitting of paragraphs. After
+     * instantiating a new XML document, it searches for all <p> tags, iterates
+     * through them, and creates a list of paragraph objects, containing the
+     * paragraph ID and contents.
+     */
+    private void findParagraphs(String fileName) throws AlignmentParserException {
+        try {
+            File inputFile = new File(fileName);
 
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(inputFile);
-			doc.getDocumentElement().normalize();
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(inputFile);
+            doc.getDocumentElement().normalize();
 
-			NodeList nList = doc.getElementsByTagName("p");
-			for (int temp = 0; temp < nList.getLength(); temp++) {
+            NodeList allTags = doc.getElementsByTagName("p");
 
-				Node nNode = nList.item(temp);
-				NamedNodeMap nmap = nNode.getAttributes();
-				int pid = Integer.parseInt(nmap.getNamedItem("id").getNodeValue());
-				paragraphs.add(new Paragraph(pid, nNode.getTextContent()));
-			}
+            for (int tag = 0; tag < allTags.getLength(); tag++) {
+                Node oneTag = allTags.item(tag);
+                NamedNodeMap attributes = oneTag.getAttributes();
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+                /**
+                 * If the current paragraph does not have an "id" attribute,
+                 * the Paragraph class will generate a random, negative one
+                 * by default.
+                 */
+                if (attributes.getNamedItem("id").getNodeValue() == null) {
+                    paragraphs.add(new Paragraph(oneTag.getTextContent()));
+                } else {
+                    int pid = Integer.parseInt(attributes.getNamedItem("id").getNodeValue());
+                    paragraphs.add(new Paragraph(pid, oneTag.getTextContent()));
+                }
+            }
+        } catch (ParserConfigurationException | SAXException | IOException err) {
+            throw new AlignmentParserException(err.getMessage());
+        }
+    }
 
-	/**
-	 * @return the paragraphs
-	 */
-	public List<Paragraph> getParagraphs() {
-		return paragraphs;
-	}
+    public List<Paragraph> getParagraphs() {
+        return paragraphs;
+    }
 
-	/**
-	 * @param paragraphs the paragraphs to set
-	 */
-	public void setParagraphs(List<Paragraph> paragraphs) {
-		this.paragraphs = paragraphs;
-	}
+    public void setParagraphs(List<Paragraph> paragraphs) {
+        this.paragraphs = paragraphs;
+    }
 }

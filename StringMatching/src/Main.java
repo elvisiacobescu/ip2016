@@ -3,12 +3,15 @@ import parser.*;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ParserXMLFile parser = new ParserXMLFile("..\\tests\\samples\\slov1a.txt");
-		for (Paragraph p : parser.getParagraphs() ){
-			System.out.println(p);
+		try {
+		    ParserXMLFile parser =
+		        new ParserXMLFile("..\\tests\\samples\\slov2a.txt");
+
+		    for (Paragraph p : parser.getParagraphs()) {
+			    System.out.println(p);
+		    }
+		} catch (AlignmentParserException err) {
+		    System.err.println(err);
 		}
-
 	}
-
 }
