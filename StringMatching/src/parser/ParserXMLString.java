@@ -12,10 +12,10 @@ import org.w3c.dom.Node;
 
 public class ParserXMLString {
 
-	private List<String> paragraphs;
+	private List<Paragraph> paragraphs;
 
 	public ParserXMLString (String xmlString){
-		paragraphs = new ArrayList<String>();
+		paragraphs = new ArrayList<Paragraph>();
 		this.init(xmlString);
 	}
 
@@ -24,7 +24,7 @@ public class ParserXMLString {
 
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(new InputSource( new StringReader( xmlString )) );
+			Document doc = dBuilder.parse(new InputSource(new StringReader(xmlString)));
 			doc.getDocumentElement().normalize();
 
 			NodeList nList = doc.getElementsByTagName("p");
@@ -43,14 +43,14 @@ public class ParserXMLString {
 	/**
 	 * @return the paragraphs
 	 */
-	public List<String> getParagraphs() {
+	public List<Paragraph> getParagraphs() {
 		return paragraphs;
 	}
 
 	/**
 	 * @param paragraphs the paragraphs to set
 	 */
-	public void setParagraphs(List<String> paragraphs) {
+	public void setParagraphs(List<Paragraph> paragraphs) {
 		this.paragraphs = paragraphs;
 	}
 }
