@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <p id="1">
+        Všetci ľudia sa rodia slobodní a sebe rovní, čo sa týka ich dôstojnosti
+        a práv.  Sú obdarení rozumom a majú navzájom jednať v bratskom duchu.
+    </p>
+
+    <p id="2">
+        Počet slovenských slov fungujúcich alebo aspoň raz použitých v písaných
+        textoch súčasnej slovenčiny nachádzajúcich sa v Slovenskom národnom
+        korpuse môžeme odhadovať na viac ako 3 milióny (podľa jednotlivých
+        tvarov) alebo približne 2 milióny (podľa počtu základných tvarov, v
+        ktorých sú obsiahnuté všetky ich tvary nachádzajúce sa v textoch
+        korpusu).
+    </p>
+
+    <p id="3">
+        Slovenčina používa abecedu zloženú z modifikovaných latinských písmen.
+        Modifikácie spočívajú v používaní diakritických znamienok: dĺžňa,
+        mäkčeňa, dvojbodky a vokáňa. Na označenie jednej hlásky sa zvyčajne
+        používa jedno písmeno.
+    </p>
+</root>

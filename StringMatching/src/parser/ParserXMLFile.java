@@ -9,20 +9,21 @@ import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
+import org.w3c.dom.NamedNodeMap;
 
 public class ParserXMLFile {
 
-	private List<String> paragraphs;
+	private List<Paragraph> paragraphs;
 
 	public ParserXMLFile (String fileName){
-		paragraphs = new ArrayList<String>();
+		paragraphs = new ArrayList<Paragraph>();
 		this.init(fileName);
 	}
 
 	private void init(String fileName) {
-		try {	
+		try {
 			File inputFile = new File(fileName);
-			
+
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(inputFile);
@@ -30,11 +31,13 @@ public class ParserXMLFile {
 
 			NodeList nList = doc.getElementsByTagName("p");
 			for (int temp = 0; temp < nList.getLength(); temp++) {
-				
+
 				Node nNode = nList.item(temp);
-				paragraphs.add(nNode.getTextContent());
+				NamedNodeMap nmap = nNode.getAttributes();
+				int pid = Integer.parseInt(nmap.getNamedItem("id").getNodeValue());
+				paragraphs.add(new Paragraph(pid, nNode.getTextContent()));
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,14 +46,14 @@ public class ParserXMLFile {
 	/**
 	 * @return the paragraphs
 	 */
-	public List<String> getParagraphs() {
+	public List<Paragraph> getParagraphs() {
 		return paragraphs;
 	}
 
 	/**
 	 * @param paragraphs the paragraphs to set
 	 */
-	public void setParagraphs(List<String> paragraphs) {
+	public void setParagraphs(List<Paragraph> paragraphs) {
 		this.paragraphs = paragraphs;
 	}
 }

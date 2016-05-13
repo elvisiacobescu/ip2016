@@ -14,14 +14,14 @@ public class ParserXMLString {
 
 	private List<String> paragraphs;
 
-	ParserXMLString (String xmlString){
+	public ParserXMLString (String xmlString){
 		paragraphs = new ArrayList<String>();
 		this.init(xmlString);
 	}
 
 	private void init(String xmlString) {
-		try {	
-			
+		try {
+
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(new InputSource( new StringReader( xmlString )) );
@@ -29,12 +29,12 @@ public class ParserXMLString {
 
 			NodeList nList = doc.getElementsByTagName("p");
 			for (int temp = 0; temp < nList.getLength(); temp++) {
-				
+
 				Node nNode = nList.item(temp);
 				TextNormalizer sanitizedText = new TextNormalizer(nNode.getTextContent());
 				paragraphs.add(sanitizedText.getClearedText());
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
