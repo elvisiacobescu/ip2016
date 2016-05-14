@@ -8,10 +8,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             ParserXMLFile firstFile =
-                new ParserXMLFile("..\\tests\\samples\\slov2a.txt");
+                new ParserXMLFile("..\\tests\\samples\\slov1a.txt");
 
             ParserXMLFile secondFile =
-                new ParserXMLFile("..\\tests\\samples\\slov2b.txt");
+                new ParserXMLFile("..\\tests\\samples\\slov1b.txt");
 
             TextNormalizer normalizer = new TextNormalizer();
 
@@ -45,7 +45,7 @@ public class Main {
                     }
                 }
             }
-        } catch (AlignmentParserException err) {
+        } catch (AlignmentParserException | AlignmentFactoryException err) {
             System.err.println(err);
         }
     }
