@@ -5,8 +5,8 @@ import jaligner.matrix.*;
 
 public class SmithWatermanGotoh implements TextAligner {
 
-    private String firstString;
-    private String secondString;
+    private String firstText;
+    private String secondText;
     private Sequence firstSequence;
     private Sequence secondSequence;
     private float score;
@@ -17,25 +17,25 @@ public class SmithWatermanGotoh implements TextAligner {
     SmithWatermanGotoh() {
     }
 
-    public SmithWatermanGotoh(String firstString, String secondString) {
-        this.firstString = firstString;
-        this.secondString = secondString;
+    public SmithWatermanGotoh(String firstText, String secondText) {
+        this.firstText = firstText;
+        this.secondText = secondText;
     }
 
-    public void setFirstString(String text) {
-        firstString = text;
+    public void setFirstText(String text) {
+        firstText = text;
     }
 
-    public void setSecondString(String text) {
-        secondString = text;
+    public void setSecondText(String text) {
+        secondText = text;
     }
 
-    public String getFirstString() {
-        return firstString;
+    public String getFirstText() {
+        return firstText;
     }
 
-    public String getSecondString() {
-        return secondString;
+    public String getSecondText() {
+        return secondText;
     }
 
     public float getScore() {
@@ -55,8 +55,8 @@ public class SmithWatermanGotoh implements TextAligner {
     }
 
     public void align() {
-        firstSequence = new Sequence(firstString);
-        secondSequence = new Sequence(secondString);
+        firstSequence = new Sequence(firstText);
+        secondSequence = new Sequence(secondText);
 
         try {
             Alignment alignment =

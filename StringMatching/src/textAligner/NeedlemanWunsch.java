@@ -3,15 +3,27 @@ package textaligner;
 import jaligner.matrix.Matrix;
 
 public final class NeedlemanWunsch implements TextAligner {
-    /**
-     * Hidden constructor
-     */
+
     public NeedlemanWunsch() {
         super();
     }
 
     public NeedlemanWunsch(String str1, String str2) {
         super();
+    }
+
+    /**
+     * TODO: Get alignment position in the first string.
+     */
+    public int getFirstStart() {
+        return -1;
+    }
+
+    /**
+     * TODO: Get alignment position in the second string.
+     */
+    public int getSecondStart() {
+        return -1;
     }
 
     /**

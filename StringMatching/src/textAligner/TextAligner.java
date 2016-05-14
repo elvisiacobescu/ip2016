@@ -1,5 +1,7 @@
 package textaligner;
 
 public interface TextAligner {
-    public void align();
+    void align();
+    int getFirstStart();
+    int getSecondStart();
 }
