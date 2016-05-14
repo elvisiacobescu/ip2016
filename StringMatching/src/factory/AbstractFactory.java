@@ -1,6 +1,8 @@
 package factory;
 
-import textmatchmcore.TextMatchScore;
+import java.util.List;
+
+import textmatchscore.TextMatchScore;
 import textaligner.TextAligner;
 
 public interface AbstractFactory {

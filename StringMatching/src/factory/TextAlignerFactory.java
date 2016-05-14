@@ -8,7 +8,11 @@ import textaligner.*;
 
 public class TextAlignerFactory implements AbstractFactory {
 
-    public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2) {
+    TextAlignerFactory() {
+    }
+
+    public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2)
+            throws AlignmentFactoryException {
         String err = "Use a TextMatchScoreFactory for obtaining scores.";
         throw new AlignmentFactoryException(err);
     }
@@ -19,13 +23,14 @@ public class TextAlignerFactory implements AbstractFactory {
         errorBuilder.append("You must choose a text alignment algorithm. ");
         errorBuilder.append("Valid choices are: ");
         errorBuilder.append("\t* SWG: SmithWatermanGotoh (local sequence alignment)");
-        errorBuilder.append("\t* NW: NeedlemanWunsch (global sequence alignment)");
+        errorBuilder.append("\t* NWG: NeedlemanWunschGotoh (global sequence alignment)");
         errorBuilder.append("\t* KMP: Knuth-Morris-Pratt (string matching)");
 
         return errorBuilder.toString();
     }
 
-    public TextAligner getTextAligner(String algorithm, String str1, String str2) {
+    public TextAligner getTextAligner(String algorithm, String str1, String str2)
+            throws AlignmentFactoryException {
         if (algorithm == null) {
             throw new AlignmentFactoryException(getUsage());
         }
@@ -33,8 +38,8 @@ public class TextAlignerFactory implements AbstractFactory {
         if (algorithm.equalsIgnoreCase("SWG")) {
             return new SmithWatermanGotoh(str1, str2);
 
-        } else if (algorithm.equalsIgnoreCase("NW")) {
-            return new NeedlemanWunsch(str1, str2);
+        } else if (algorithm.equalsIgnoreCase("NWG")) {
+            return new NeedlemanWunschGotoh(str1, str2);
 
         } else if (algorithm.equalsIgnoreCase("KMP")) {
             return new KMP(str1, str2);
@@ -46,7 +51,7 @@ public class TextAlignerFactory implements AbstractFactory {
     public List<String> getAlgorithms() {
         ArrayList<String> allAlgorithms = new ArrayList<String>();
         allAlgorithms.add("SWG");
-        allAlgorithms.add("NW");
+        allAlgorithms.add("NWG");
         allAlgorithms.add("KMP");
 
         return allAlgorithms;
