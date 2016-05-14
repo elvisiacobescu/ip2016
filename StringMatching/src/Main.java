@@ -1,19 +1,49 @@
+import factory.*;
 import parser.*;
+import textaligner.*;
+import textmatchscore.*;
 
 public class Main {
 
     public static void main(String[] args) {
         try {
-            ParserXMLFile parser =
+            ParserXMLFile firstFile =
                 new ParserXMLFile("..\\tests\\samples\\slov2a.txt");
 
-            for (Paragraph p : parser.getParagraphs()) {
-                TextNormalizer normalizer =
-                    new TextNormalizer(p.getParagraphContent());
-                normalizer.normalize();
-                p.setParagraphContent(normalizer.getFinalText());
+            ParserXMLFile secondFile =
+                new ParserXMLFile("..\\tests\\samples\\slov2b.txt");
 
-                System.out.println(p);
+            TextNormalizer normalizer = new TextNormalizer();
+
+            AbstractFactory textAlignerFactory =
+                FactoryProducer.getFactory("Aligner");
+
+            AbstractFactory alignmentScoreFactory =
+                FactoryProducer.getFactory("Score");
+
+            for (Paragraph firstParagraph : firstFile.getParagraphs()) {
+
+                normalizer.setInitialText(firstParagraph.getParagraphContent());
+                normalizer.normalize();
+                firstParagraph.setParagraphContent(normalizer.getFinalText());
+
+                for (Paragraph secondParagraph : secondFile.getParagraphs()) {
+
+                    normalizer.setInitialText(secondParagraph.getParagraphContent());
+                    normalizer.normalize();
+                    secondParagraph.setParagraphContent(normalizer.getFinalText());
+
+                    for (String algorithm : textAlignerFactory.getAlgorithms()) {
+
+                        TextAligner textAligner =
+                            textAlignerFactory.getTextAligner(
+                                    algorithm,
+                                    firstParagraph.getParagraphContent(),
+                                    secondParagraph.getParagraphContent());
+
+                        textAligner.align();
+                    }
+                }
             }
         } catch (AlignmentParserException err) {
             System.err.println(err);
