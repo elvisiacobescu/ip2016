@@ -1,11 +1,13 @@
 package factory;
 
-import textMatchScore.TextMatchScore;
-import textAligner.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class TextAlignerFactory extends AbstractFactory {
+import textmatchscore.TextMatchScore;
+import textaligner.*;
 
-    @Override
+public class TextAlignerFactory implements AbstractFactory {
+
     public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2) {
         String err = "Use a TextMatchScoreFactory for obtaining scores.";
         throw new AlignmentFactoryException(err);
@@ -23,7 +25,6 @@ public class TextAlignerFactory extends AbstractFactory {
         return errorBuilder.toString();
     }
 
-    @Override
     public TextAligner getTextAligner(String algorithm, String str1, String str2) {
         if (algorithm == null) {
             throw new AlignmentFactoryException(getUsage());
@@ -40,5 +41,14 @@ public class TextAlignerFactory extends AbstractFactory {
         }
 
         throw new AlignmentFactoryException(getUsage());
+    }
+
+    public List<String> getAlgorithms() {
+        ArrayList<String> allAlgorithms = new ArrayList<String>();
+        allAlgorithms.add("SWG");
+        allAlgorithms.add("NW");
+        allAlgorithms.add("KMP");
+
+        return allAlgorithms;
     }
 }

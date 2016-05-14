@@ -1,11 +1,12 @@
 package factory;
 
-import textMatchScore.TextMatchScore;
-import textAligner.TextAligner;
+import textmatchmcore.TextMatchScore;
+import textaligner.TextAligner;
 
-public abstract class AbstractFactory {
-    public abstract TextMatchScore getTextMatchScore(String algorithm, String str1, String str2)
+public interface AbstractFactory {
+    TextMatchScore getTextMatchScore(String algorithm, String str1, String str2)
         throws AlignmentFactoryException;
-    public abstract TextAligner getTextAligner(String algorithm, String str1, String str2)
+    TextAligner getTextAligner(String algorithm, String str1, String str2)
         throws AlignmentFactoryException;
+    List<String> getAlgorithms();
 }

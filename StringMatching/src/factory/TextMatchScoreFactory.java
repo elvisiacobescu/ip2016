@@ -1,11 +1,13 @@
 package factory;
 
-import textAligner.TextAligner;
-import textMatchScore.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class TextMatchScoreFactory extends AbstractFactory {
+import textaligner.TextAligner;
+import textmatchscore.*;
 
-    @Override
+public class TextMatchScoreFactory implements AbstractFactory {
+
     public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2)
             throws AlignmentFactoryException {
 
@@ -42,10 +44,19 @@ public class TextMatchScoreFactory extends AbstractFactory {
         return errorBuilder.toString();
     }
 
-    @Override
     public TextAligner getTextAligner(String algorithm, String str1, String str2)
             throws AlignmentFactoryException {
         String err = "Use a TextAlignerFactory for string alignment.";
         throw new AlignmentFactoryException(err);
+    }
+
+    public List<String> getAlgorithms() {
+        ArrayList<String> allAlgorithms = new ArrayList<String>();
+        allAlgorithms.add("HammingDistance");
+        allAlgorithms.add("JaroWinkler");
+        allAlgorithms.add("Levenshtein");
+        allAlgorithms.add("LCS");
+
+        return allAlgorithms;
     }
 }
