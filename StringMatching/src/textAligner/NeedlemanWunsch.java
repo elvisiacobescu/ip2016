@@ -1,4 +1,4 @@
-package textaligner;
+package textAligner;
 
 import jaligner.matrix.Matrix;
 
@@ -7,6 +7,10 @@ public final class NeedlemanWunsch implements TextAligner {
      * Hidden constructor
      */
     public NeedlemanWunsch() {
+        super();
+    }
+
+    public NeedlemanWunsch(String str1, String str2) {
         super();
     }
 

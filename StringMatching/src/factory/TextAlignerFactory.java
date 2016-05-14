@@ -1,38 +1,44 @@
 package factory;
 
-
-import textAligner.*;
-import textMatchScore.HammingDistance;
-import textMatchScore.JaroWinkler;
-import textMatchScore.Levenshtein;
-import textMatchScore.LongestCommonSubsequence;
 import textMatchScore.TextMatchScore;
+import textAligner.*;
 
-public class TextAlignerFactory extends AbstractFactory{
+public class TextAlignerFactory extends AbstractFactory {
 
-	@Override
-	public TextMatchScore getTextMatchScore(String algorithm ,String str1, String str2) {
-		return null;
-	}
+    @Override
+    public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2) {
+        String err = "Use a TextMatchScoreFactory for obtaining scores.";
+        throw new AlignmentFactoryException(err);
+    }
 
-	@Override
-	public TextAligner getTextAligner(String algorithm,String str1, String str2 ) {
-		if(algorithm == null){
-			return null;
-		}		
+    private String getUsage() {
+        StringBuilder errorBuilder = new StringBuilder();
 
-		if(algorithm.equalsIgnoreCase("SWG")){
-			return new SmithWatermanGotoh(str1, str2);
+        errorBuilder.append("You must choose a text alignment algorithm. ");
+        errorBuilder.append("Valid choices are: ");
+        errorBuilder.append("\t* SWG: SmithWatermanGotoh (local sequence alignment)");
+        errorBuilder.append("\t* NW: NeedlemanWunsch (global sequence alignment)");
+        errorBuilder.append("\t* KMP: Knuth-Morris-Pratt (string matching)");
 
-		}else if(algorithm.equalsIgnoreCase("NW")){
-			return new NeedlemanWunsch();
+        return errorBuilder.toString();
+    }
 
-		}else if(algorithm.equalsIgnoreCase("KMP")){
-			return new KMP(str1, str2);
-		}
-		
+    @Override
+    public TextAligner getTextAligner(String algorithm, String str1, String str2) {
+        if (algorithm == null) {
+            throw new AlignmentFactoryException(getUsage());
+        }
 
-		return null;
-		
-	}
+        if (algorithm.equalsIgnoreCase("SWG")) {
+            return new SmithWatermanGotoh(str1, str2);
+
+        } else if (algorithm.equalsIgnoreCase("NW")) {
+            return new NeedlemanWunsch(str1, str2);
+
+        } else if (algorithm.equalsIgnoreCase("KMP")) {
+            return new KMP(str1, str2);
+        }
+
+        throw new AlignmentFactoryException(getUsage());
+    }
 }
