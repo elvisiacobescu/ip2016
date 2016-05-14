@@ -8,6 +8,13 @@ public class TextNormalizer {
     private String styleCorrectedText;
     private String finalText;
 
+    public TextNormalizer(String text) {
+        initialText = text;
+    }
+
+    public TextNormalizer() {
+    }
+
     public void setInitialText(String text) {
         initialText = text;
     }
@@ -46,10 +53,6 @@ public class TextNormalizer {
 
     public String getFinalText() {
         return finalText;
-    }
-
-    public TextNormalizer(String text) {
-        initialText = text;
     }
 
     public void clearText() {
