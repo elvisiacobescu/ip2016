@@ -22,8 +22,8 @@ public class TextAlignerFactory implements AbstractFactory {
 
         errorBuilder.append("You must choose a text alignment algorithm. ");
         errorBuilder.append("Valid choices are: ");
-        errorBuilder.append("\t* SWG: SmithWatermanGotoh (local sequence alignment)");
-        errorBuilder.append("\t* NWG: NeedlemanWunschGotoh (global sequence alignment)");
+        errorBuilder.append("\t* SWG: Smith-Waterman-Gotoh (local sequence alignment)");
+        errorBuilder.append("\t* NWG: Needleman-Wunsch-Gotoh (global sequence alignment)");
         errorBuilder.append("\t* KMP: Knuth-Morris-Pratt (string matching)");
 
         return errorBuilder.toString();
@@ -42,7 +42,7 @@ public class TextAlignerFactory implements AbstractFactory {
             return new NeedlemanWunschGotoh(str1, str2);
 
         } else if (algorithm.equalsIgnoreCase("KMP")) {
-            return new KMP(str1, str2);
+            return new KnuthMorrisPratt(str1, str2);
         }
 
         throw new AlignmentFactoryException(getUsage());

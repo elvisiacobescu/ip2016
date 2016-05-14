@@ -1,12 +1,14 @@
 package textaligner;
 
-public final class KMP implements TextAligner {
+import java.lang.Math;
+
+public final class KnuthMorrisPratt implements TextAligner {
 
     String text1;
     String text2;
     double score;
 
-    public KMP(String firstText, String secondText) {
+    public KnuthMorrisPratt(String firstText, String secondText) {
         super();
         text1 = firstText;
         text2 = secondText;
@@ -83,23 +85,26 @@ public final class KMP implements TextAligner {
     }
 
     public void align() {
-        String[] text1SplitInBlocks = splitInBlocks(text1);
-        String[] text2SplitInBlocks = splitInBlocks(text2);
+        String[] firstTextBlocks = splitInBlocks(text1);
+        String[] secondTextBlocks = splitInBlocks(text2);
 
-        for (int i = 0; i < text1SplitInBlocks.length; i++) {
-            int[] scores = new int[text2SplitInBlocks.length];
+        int scoresLength = Math.max(secondTextBlocks.length,
+                                    firstTextBlocks.length);
+        int[] scores = new int[scoresLength];
 
-            for (int j = 0; j < text2SplitInBlocks.length; j++) {
-                scores[i] = searchSubString(text2SplitInBlocks[j],
-                                            text1SplitInBlocks[i]);
+        for (int i = 0; i < firstTextBlocks.length; i++) {
+
+            for (int j = 0; j < secondTextBlocks.length; j++) {
+                scores[i] = searchSubString(secondTextBlocks[j],
+                                            firstTextBlocks[i]);
             }
 
             int maxPosition = getMaxPosition(scores);
-            int nrOfSpacesToAdd = scores[maxPosition];
+            int padding = scores[maxPosition];
 
-            for (int j = 0; j < text2SplitInBlocks.length - nrOfSpacesToAdd; j++) {
-                text1SplitInBlocks[i] = " " + text1SplitInBlocks[i];
-                text2SplitInBlocks[maxPosition] += " ";
+            for (int j = 0; j < secondTextBlocks.length - padding; j++) {
+                firstTextBlocks[i] = " " + firstTextBlocks[i];
+                secondTextBlocks[maxPosition] += " ";
             }
             score += scores[maxPosition];
         }
@@ -108,20 +113,16 @@ public final class KMP implements TextAligner {
 
     private int getMaxPosition(int[] vector) {
         int max = vector[0];
-        for (int i = 0; i < vector.length; i++) {
+        int i_max = 0;
+
+        for (int i = 1; i < vector.length; i++) {
             if(max < vector[i]) {
                 max = vector[i];
+                i_max = i;
             }
         }
 
-        for (int i = 0; i < vector.length; i++) {
-            if(max == vector[i]) {
-                return i;
-            }
-        }
-
-        return 0;
-
+        return i_max;
     }
 
     public double getScore() {
@@ -130,14 +131,14 @@ public final class KMP implements TextAligner {
 
     private String[] splitInBlocks(String text) {
         int dimension = text.length() / 64;
-        String[] textSplitInBlocks = new String[dimension];
+        String[] textBlocks = new String[dimension];
 
         int j = 0;
-        for (int i = 0; i < textSplitInBlocks.length; i++) {
-            textSplitInBlocks[i] = text.substring(j, j + 63);
+        for (int i = 0; i < textBlocks.length; i++) {
+            textBlocks[i] = text.substring(j, j + 63);
             j += 64;
         }
 
-        return textSplitInBlocks;
+        return textBlocks;
     }
 }
