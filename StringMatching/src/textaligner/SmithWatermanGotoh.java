@@ -1,9 +1,10 @@
-package textAligner;
+package textaligner;
 
 import jaligner.*;
 import jaligner.matrix.*;
 
 public class SmithWatermanGotoh implements TextAligner {
+
     private String firstString;
     private String secondString;
     private Sequence firstSequence;

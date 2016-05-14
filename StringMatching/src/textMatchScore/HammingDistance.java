@@ -1,4 +1,4 @@
-package textMatchScore;
+package textmatchscore;
 
 public class HammingDistance implements TextMatchScore{
 	private String compOne;
@@ -33,20 +33,20 @@ public class HammingDistance implements TextMatchScore{
 	//  values and returns the minimum distance value
 	///
 	public int minDistance(String[] numbers){
-		
+
 		int minDistance = Integer.MAX_VALUE;
 		if (checkConstraints(numbers)){
 			for (int i = 1; i < numbers.length; i++){
-				
+
 				int counter = 0;
 				for (int j = 1; j <= numbers[i].length(); j++){
 					if (numbers[i-1].charAt(j-1) != numbers[i].charAt(j-1)){
 						counter++;
 					}
 				}
-				if (counter == 0) 
+				if (counter == 0)
 					return counter;
-				if (counter < minDistance) 
+				if (counter < minDistance)
 					minDistance = counter;
 			}
 		}
@@ -84,7 +84,7 @@ public class HammingDistance implements TextMatchScore{
 		else{
 			return false;
 		}
-		
+
 		return true;
 	}
 

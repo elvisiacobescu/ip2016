@@ -1,4 +1,4 @@
-package textAligner;
+package textaligner;
 
 import jaligner.matrix.Matrix;
 

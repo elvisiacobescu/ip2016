@@ -1,4 +1,4 @@
-package textAligner;
+package textaligner;
 
 public final class KMP implements TextAligner {
 	String text1;

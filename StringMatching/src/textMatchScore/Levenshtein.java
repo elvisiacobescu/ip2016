@@ -1,17 +1,17 @@
-package textMatchScore;
+package textmatchscore;
 
 public class Levenshtein implements TextMatchScore{
 	private String compOne;
     private String compTwo;
     private int[][] matrix;
     private Boolean calculated = false;
- 
+
     public Levenshtein(String one, String two)
     {
         compOne = one;
         compTwo = two;
     }
- 
+
     public Levenshtein() {
 		// TODO Auto-generated constructor stub
 	}
@@ -22,22 +22,22 @@ public class Levenshtein implements TextMatchScore{
         }
         return matrix[compOne.length()][compTwo.length()];
     }
-     
+
     public int[][] getMatrix(){
         setupMatrix();
         return matrix;
     }
- 
+
     private void setupMatrix(){
         matrix = new int[compOne.length()+1][compTwo.length()+1];
         for (int i = 0; i <= compOne.length(); i++){
             matrix[i][0] = i;
         }
- 
+
         for (int j = 0; j <= compTwo.length(); j++){
             matrix[0][j] = j;
         }
- 
+
         for (int i = 1; i < matrix.length; i++){
             for (int j = 1; j < matrix[i].length; j++)
             {
@@ -50,15 +50,15 @@ public class Levenshtein implements TextMatchScore{
                     if ((matrix[i-1][j])+1 < minimum){
                         minimum = (matrix[i-1][j])+1;
                     }
- 
+
                     if ((matrix[i][j-1])+1 < minimum){
                         minimum = (matrix[i][j-1])+1;
                     }
- 
+
                     if ((matrix[i-1][j-1])+1 < minimum){
                         minimum = (matrix[i-1][j-1])+1;
                     }
- 
+
                     matrix[i][j] = minimum;
                 }
             }
@@ -66,7 +66,7 @@ public class Levenshtein implements TextMatchScore{
         calculated = true;
         displayMatrix();
     }
- 
+
     private void displayMatrix()
     {
         System.out.println("  "+compOne);
