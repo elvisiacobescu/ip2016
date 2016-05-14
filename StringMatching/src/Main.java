@@ -8,6 +8,11 @@ public class Main {
 		        new ParserXMLFile("..\\tests\\samples\\slov2a.txt");
 
 		    for (Paragraph p : parser.getParagraphs()) {
+		        TextNormalizer normalizer =
+		            new TextNormalizer(p.getParagraphContent());
+		        normalizer.normalize();
+		        p.setParagraphContent(normalizer.getFinalText());
+
 			    System.out.println(p);
 		    }
 		} catch (AlignmentParserException err) {

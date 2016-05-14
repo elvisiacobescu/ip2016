@@ -1,6 +1,6 @@
 package parser;
 
-class TextNormalizer {
+public class TextNormalizer {
 
     private String initialText;
     private String clearedText;
@@ -48,7 +48,7 @@ class TextNormalizer {
         return finalText;
     }
 
-    TextNormalizer(String text) {
+    public TextNormalizer(String text) {
         initialText = text;
     }
 
@@ -89,7 +89,7 @@ class TextNormalizer {
                                                    "$1 $2"));
     }
 
-    public void sanitize() {
+    public void normalize() {
         clearText();
         removeExtraSpaces();
         correctStyle();
