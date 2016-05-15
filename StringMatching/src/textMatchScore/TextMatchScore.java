@@ -1,5 +1,5 @@
 package textmatchscore;
 
 public interface TextMatchScore {
-	public double getScore();
+	public double getScore() throws AlignmentScoreException;
 }

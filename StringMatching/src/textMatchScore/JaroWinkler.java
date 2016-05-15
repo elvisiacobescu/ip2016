@@ -1,82 +1,70 @@
 package textmatchscore;
 
-public class JaroWinkler implements TextMatchScore{
-	private String compOne;
-    private String compTwo;
+public class JaroWinkler implements TextMatchScore {
+    private String firstString;
+    private String secondString;
 
     private String theMatchA = "";
     private String theMatchB = "";
     private int mRange = -1;
 
-    public JaroWinkler()
-    {
+    public JaroWinkler(String firstString, String secondString) {
+        this.firstString = firstString;
+        this.secondString = secondString;
     }
 
-    public JaroWinkler(String s1, String s2)
-    {
-        compOne = s1;
-        compTwo = s2;
+    public double getScore() {
+        return getSimilarity();
     }
 
-    public double getSimilarity(String s1, String s2)
-    {
-        compOne = s1;
-        compTwo = s2;
-
-        mRange = Math.max(compOne.length(), compTwo.length()) / 2 - 1;
-
-        double res = -1;
+    public double getSimilarity() {
+        mRange = Math.max(firstString.length(), secondString.length()) / 2 - 1;
 
         int m = getMatch();
         int t = 0;
-        if (getMissMatch(compTwo,compOne) > 0)
-        {
-            t = (getMissMatch(compOne,compTwo) / getMissMatch(compTwo,compOne));
+
+        if (getMismatch(secondString, firstString) > 0) {
+            t = getMismatch(firstString, secondString) / getMismatch(secondString, firstString);
         }
 
-        int l1 = compOne.length();
-        int l2 = compTwo.length();
+        int l1 = firstString.length();
+        int l2 = secondString.length();
 
         double f = 0.3333;
-        double mt = (double)(m-t)/m;
-        double jw = f * ((double)m/l1+(double)m/l2+(double)mt);
-        res = jw + getCommonPrefix(compOne,compTwo) * (0.1*(1.0 - jw));
+        double mt = (double) (m - t) / m;
+        double jw = f * ((double) m / l1 + (double) m / l2 + mt);
+        double res = jw + getCommonPrefix(firstString, secondString) * (0.1 * (1.0 - jw));
 
         return res;
     }
 
-    private int getMatch()
-    {
+    private int getMatch() {
 
         theMatchA = "";
         theMatchB = "";
 
         int matches = 0;
 
-        for (int i = 0; i < compOne.length(); i++)
-        {
+        for (int i = 0; i < firstString.length(); i++) {
+
             //Look backward
             int counter = 0;
-            while(counter <= mRange && i >= 0 && counter <= i)
-            {
-                if (compOne.charAt(i) == compTwo.charAt(i - counter))
-                {
+            while(counter <= mRange && i >= 0 && counter <= i) {
+                if (firstString.charAt(i) == secondString.charAt(i - counter)) {
                     matches++;
-                    theMatchA = theMatchA + compOne.charAt(i);
-                    theMatchB = theMatchB + compTwo.charAt(i);
+                    theMatchA = theMatchA + firstString.charAt(i);
+                    theMatchB = theMatchB + secondString.charAt(i);
                 }
                 counter++;
             }
 
             //Look forward
             counter = 1;
-            while(counter <= mRange && i < compTwo.length() && counter + i < compTwo.length())
-            {
-                if (compOne.charAt(i) == compTwo.charAt(i + counter))
-                {
+            while(counter <= mRange && i < secondString.length() && counter + i < secondString.length()) {
+                if (firstString.charAt(i) == secondString.charAt(i + counter)) {
                     matches++;
-                    theMatchA = theMatchA + compOne.charAt(i);
-                    theMatchB = theMatchB + compTwo.charAt(i);
+                    theMatchA = theMatchA + firstString.charAt(i);
+                    theMatchB = theMatchB + secondString.charAt(i);
                 }
                 counter++;
             }
@@ -84,7 +72,7 @@ public class JaroWinkler implements TextMatchScore{
         return matches;
     }
 
-    private int getMissMatch(String s1, String s2)
+    private int getMismatch(String s1, String s2)
     {
         int transPositions = 0;
 
@@ -115,18 +103,13 @@ public class JaroWinkler implements TextMatchScore{
         return transPositions;
     }
 
-    private int getCommonPrefix(String compOne, String compTwo)
+    private int getCommonPrefix(String firstString, String secondString)
     {
         int cp = 0;
         for (int i = 0; i < 4; i++)
         {
-            if (compOne.charAt(i) == compTwo.charAt(i)) cp++;
+            if (firstString.charAt(i) == secondString.charAt(i)) cp++;
         }
         return cp;
     }
-
-	@Override
-	public double getScore() {
-		return getSimilarity(compOne,compTwo);
-	}
 }
