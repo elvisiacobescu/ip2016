@@ -4,33 +4,97 @@ import java.lang.Math;
 
 public final class KnuthMorrisPratt implements TextAligner {
 
-    String text1;
-    String text2;
-    double score;
+    private static final int CHUNKSIZE = 32;
+
+    private String firstText;
+    private String secondText;
+    private int firstStart;
+    private int secondStart;
 
     public KnuthMorrisPratt(String firstText, String secondText) {
-        super();
-        text1 = firstText;
-        text2 = secondText;
+        this.firstText = firstText;
+        this.secondText = secondText;
     }
 
-    /**
-     * TODO: Get alignment position in the first string.
-     */
     public int getFirstStart() {
-        return -1;
+        return firstStart;
     }
 
-    /**
-     * TODO: Get alignment position in the second string.
-     */
     public int getSecondStart() {
-        return -1;
+        return secondStart;
     }
 
     public void setTexts(String firstText, String secondText) {
-        this.text1 = firstText;
-        this.text2 = secondText;
+        this.firstText = firstText;
+        this.secondText = secondText;
+    }
+
+    public void align() {
+        String bigger;
+        String smaller;
+
+        if (firstText.length() > secondText.length()) {
+            bigger = firstText;
+            smaller = secondText;
+        } else {
+            smaller = firstText;
+            bigger = secondText;
+        }
+
+        String[] blocks = splitInBlocks(smaller);
+        int[] matches = new int[blocks.length];
+
+        for (int block = 0; block < blocks.length; block++) {
+            matches[block] = searchSubString(bigger, blocks[block]);
+        }
+
+        int maxBlock = getMaxMatch(matches);
+        int match = matches[maxBlock];
+
+        if (match == CHUNKSIZE) {
+            int smallerStart = 0;
+
+            int biggerStart = bigger.indexOf(
+                    smaller.substring(maxBlock * match,
+                                      maxBlock * match + CHUNKSIZE))
+                - maxBlock * match;
+
+            if (smaller.equals(firstText)) {
+                firstStart = smallerStart;
+                secondStart = biggerStart;
+            } else {
+                secondStart = smallerStart;
+                firstStart = biggerStart;
+            }
+        }
+    }
+
+    private int getMaxMatch(int[] vector) {
+        int max = vector[0];
+        int i_max = 0;
+
+        for (int i = 1; i < vector.length; i++) {
+            if (max < vector[i]) {
+                max = vector[i];
+                i_max = i;
+            }
+        }
+
+        return i_max;
+    }
+
+    private String[] splitInBlocks(String text) {
+        int chunks = text.length() / CHUNKSIZE + 1;
+        String[] textBlocks = new String[chunks];
+
+        int start = 0;
+        for (int i = 0; i < textBlocks.length; i++) {
+            int stop = Math.min(start + CHUNKSIZE - 1, text.length());
+            textBlocks[i] = text.substring(start, stop);
+            start += CHUNKSIZE;
+        }
+
+        return textBlocks;
     }
 
     private int[] preProcessPattern(String ptrn) {
@@ -52,16 +116,8 @@ public final class KnuthMorrisPratt implements TextAligner {
         return PartialMatchTable;
     }
 
-    /**
-     * Based on the pre processed array, search for the pattern in the text
-     *
-     * @param text
-     *            text over which search happens
-     * @param ptrn
-     *            pattern that is to be searched
-     */
     private int searchSubString(String text, String ptrn) {
-        int i = 0, j = 0;
+
         // pattern and text lengths
         int ptrnLen = ptrn.length();
         int txtLen = text.length();
@@ -69,76 +125,23 @@ public final class KnuthMorrisPratt implements TextAligner {
         // initialize new array and preprocess the pattern
         int[] PartialMatchTable = preProcessPattern(ptrn);
 
+        int i = 0;
+        int j = 0;
         while (i < txtLen) {
+
             while (j >= 0 && text.charAt(i) != ptrn.charAt(j)) {
                 j = PartialMatchTable[j];
             }
+
             i++;
             j++;
 
             // a match is found
             if (j == ptrnLen) {
-                return j;
-            }
-        }
-        return j;
-    }
-
-    public void align() {
-        String[] firstTextBlocks = splitInBlocks(text1);
-        String[] secondTextBlocks = splitInBlocks(text2);
-
-        int scoresLength = Math.max(secondTextBlocks.length,
-                                    firstTextBlocks.length);
-        int[] scores = new int[scoresLength];
-
-        for (int i = 0; i < firstTextBlocks.length; i++) {
-
-            for (int j = 0; j < secondTextBlocks.length; j++) {
-                scores[i] = searchSubString(secondTextBlocks[j],
-                                            firstTextBlocks[i]);
-            }
-
-            int maxPosition = getMaxPosition(scores);
-            int padding = scores[maxPosition];
-
-            for (int j = 0; j < secondTextBlocks.length - padding; j++) {
-                firstTextBlocks[i] = " " + firstTextBlocks[i];
-                secondTextBlocks[maxPosition] += " ";
-            }
-            score += scores[maxPosition];
-        }
-
-    }
-
-    private int getMaxPosition(int[] vector) {
-        int max = vector[0];
-        int i_max = 0;
-
-        for (int i = 1; i < vector.length; i++) {
-            if(max < vector[i]) {
-                max = vector[i];
-                i_max = i;
+                return j + 1;
             }
         }
 
-        return i_max;
-    }
-
-    public double getScore() {
-        return text1.length() + text2.length() - this.score;
-    }
-
-    private String[] splitInBlocks(String text) {
-        int dimension = text.length() / 64;
-        String[] textBlocks = new String[dimension];
-
-        int j = 0;
-        for (int i = 0; i < textBlocks.length; i++) {
-            textBlocks[i] = text.substring(j, j + 63);
-            j += 64;
-        }
-
-        return textBlocks;
+        return j + 1;
     }
 }
