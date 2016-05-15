@@ -1,6 +1,6 @@
 package factory;
 
-public class FactoryProducer {
+public final class FactoryProducer {
 
     public static AbstractFactory getFactory(String choice)
             throws AlignmentFactoryException {

@@ -1,6 +1,6 @@
 package textmatchscore;
 
-public class HammingDistance implements TextMatchScore {
+public final class HammingDistance implements TextMatchScore {
 
     private String compOne;
     private String compTwo;

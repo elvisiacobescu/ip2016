@@ -1,6 +1,6 @@
 package factory;
 
-public class AlignmentFactoryException extends Exception {
+public final class AlignmentFactoryException extends Exception {
 
     /**
      * Exceptions are serializable, and all serializable classes should define

@@ -1,6 +1,6 @@
 package parser;
 
-public class TextNormalizer {
+public final class TextNormalizer {
 
     private String initialText;
     private String clearedText;

@@ -6,7 +6,7 @@ import java.util.List;
 import textaligner.TextAligner;
 import textmatchscore.*;
 
-public class TextMatchScoreFactory implements AbstractFactory {
+public final class TextMatchScoreFactory implements AbstractFactory {
 
     public TextMatchScore getTextMatchScore(String algorithm, String str1, String str2)
             throws AlignmentFactoryException {

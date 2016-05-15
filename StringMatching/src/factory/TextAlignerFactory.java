@@ -6,7 +6,7 @@ import java.util.List;
 import textmatchscore.TextMatchScore;
 import textaligner.*;
 
-public class TextAlignerFactory implements AbstractFactory {
+public final class TextAlignerFactory implements AbstractFactory {
 
     TextAlignerFactory() {
     }

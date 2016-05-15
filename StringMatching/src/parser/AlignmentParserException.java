@@ -1,6 +1,6 @@
 package parser;
 
-public class AlignmentParserException extends Exception {
+public final class AlignmentParserException extends Exception {
 
     /**
      * Exceptions are serializable, and all serializable classes should define

@@ -18,7 +18,7 @@ import java.util.Arrays;
  * The distance is computed as 1 - Jaro-Winkler similarity.
  * @author Thibault Debatty
  */
-public class JaroWinkler implements TextMatchScore {
+public final class JaroWinkler implements TextMatchScore {
 
     private String firstString;
     private String secondString;

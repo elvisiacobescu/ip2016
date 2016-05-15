@@ -1,6 +1,6 @@
 package textmatchscore;
 
-public class LongestCommonSubsequence implements TextMatchScore {
+public final class LongestCommonSubsequence implements TextMatchScore {
 
 	private String firstString;
 	private String secondString;

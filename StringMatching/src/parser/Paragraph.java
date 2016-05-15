@@ -2,7 +2,7 @@ package parser;
 
 import java.util.Random;
 
-public class Paragraph {
+public final class Paragraph {
 
     private int paragraphNum;
     private String paragraphContent;

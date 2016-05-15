@@ -1,6 +1,6 @@
 package textmatchscore;
 
-public class Levenshtein implements TextMatchScore{
+public final class Levenshtein implements TextMatchScore{
 
     private String firstString;
     private String secondString;

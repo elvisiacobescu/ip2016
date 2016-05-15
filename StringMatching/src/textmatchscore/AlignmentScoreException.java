@@ -1,6 +1,6 @@
 package textmatchscore;
 
-public class AlignmentScoreException extends Exception {
+public final class AlignmentScoreException extends Exception {
 
     /**
      * Exceptions are serializable, and all serializable classes should define
