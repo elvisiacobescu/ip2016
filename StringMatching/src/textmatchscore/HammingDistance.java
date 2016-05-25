@@ -1,5 +1,7 @@
 package textmatchscore;
 
+import java.lang.Math;
+
 public final class HammingDistance implements TextMatchScore {
 
     private String compOne;

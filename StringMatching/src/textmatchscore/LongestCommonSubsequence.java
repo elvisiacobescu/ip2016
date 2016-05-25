@@ -1,5 +1,7 @@
 package textmatchscore;
 
+import java.lang.Math;
+
 public final class LongestCommonSubsequence implements TextMatchScore {
 
 	private String firstString;
