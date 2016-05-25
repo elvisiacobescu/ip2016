@@ -48,7 +48,7 @@ public final class ParserXMLFile {
                  * the Paragraph class will generate a random, negative one
                  * by default.
                  */
-                if (attributes.getNamedItem("id").getNodeValue() == null) {
+                if (attributes.getNamedItem("id") == null) {
                     paragraphs.add(new Paragraph(oneTag.getTextContent()));
                 } else {
                     int pid = Integer.parseInt(attributes.getNamedItem("id").getNodeValue());
