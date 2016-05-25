@@ -43,6 +43,6 @@ public final class LongestCommonSubsequence implements TextMatchScore {
     }
 
 	public double getScore() {
-		return lcs().length();
+		return lcs().length() / (double) Math.min(firstString.length(), secondString.length());
 	}
 }

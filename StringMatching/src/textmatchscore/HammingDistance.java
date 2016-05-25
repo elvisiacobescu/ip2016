@@ -34,6 +34,7 @@ public final class HammingDistance implements TextMatchScore {
     }
 
     public double getScore() throws AlignmentScoreException {
-        return getHammingDistance();
+        int hamming = getHammingDistance();
+        return 1 - ((double) hamming / (double) Math.min(compOne.length(), compTwo.length()));
     }
 }

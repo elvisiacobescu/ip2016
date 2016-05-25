@@ -1,6 +1,8 @@
 package textmatchscore;
 
-public final class Levenshtein implements TextMatchScore{
+import java.lang.Math;
+
+public final class Levenshtein implements TextMatchScore {
 
     private String firstString;
     private String secondString;
@@ -13,7 +15,8 @@ public final class Levenshtein implements TextMatchScore{
 
     public double getScore() {
         setupMatrix();
-        return matrix[firstString.length()][secondString.length()];
+        double lev = matrix[firstString.length()][secondString.length()];
+        return 1 - (lev / Math.min(firstString.length(), secondString.length()));
     }
 
     private void setupMatrix() {
