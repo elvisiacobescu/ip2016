@@ -6,7 +6,7 @@ import java.io.*;
 public final class Tagterm extends Base {
 
     private static final boolean VERBOSE = true;
-    // If `true`, do not interpret HTML tidy validation warnings as errors.
+    // If `true`, ignore HTML tidy validation warnings/errors.
     private static final boolean PERMISSIVE = true;
 
     private String path;
@@ -51,11 +51,11 @@ public final class Tagterm extends Base {
 
         String line = br.readLine();
 
-        if (output && line == null) {
-            throw new Exception("missing output");
-        }
         if (rcode != 0) {
             throw new Exception(getErrMsg(rcode));
+        }
+        if (output && line == null) {
+            throw new Exception("missing output");
         }
 
         return line;
@@ -63,9 +63,10 @@ public final class Tagterm extends Base {
 
     private String createFile(String content, String name, String ext) throws Exception {
         File temp = File.createTempFile(name, "." + ext);
-        FileWriter fileoutput = new FileWriter(temp);
-        BufferedWriter buffout = new BufferedWriter(fileoutput);
-        buffout.write(content, 0, content.length());
+        FileOutputStream fileoutput = new FileOutputStream(temp);
+        BufferedWriter buffout = new BufferedWriter(
+            new OutputStreamWriter(fileoutput, ENCODING));
+        buffout.write(content);
         buffout.close();
         temp.deleteOnExit();
         return temp.getPath();
@@ -74,7 +75,7 @@ public final class Tagterm extends Base {
     public boolean validate(String file) throws Exception {
         String arg = String.format("validate -i %s", file);
         if (PERMISSIVE) {
-            arg += " -p";
+            arg += " -pp";
         }
         exec(arg, false);
         return true;
@@ -88,7 +89,7 @@ public final class Tagterm extends Base {
     public String convert(String file) throws Exception {
         String arg = String.format("convert -i %s", file);
         if (PERMISSIVE) {
-            arg += " -p";
+            arg += " -pp";
         }
         String out = exec(arg, true);
         return out;
