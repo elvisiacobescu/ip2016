@@ -1,3 +1,5 @@
+package transfer.ip.IP;
+
 
 
 import java.io.FileNotFoundException;
@@ -94,8 +96,8 @@ public class Transfer {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		sursa="E:\\sursa.xhtml";
-		destinatie="E:\\destinatie.xml";
+		sursa="C:\\Users\\Cozmin\\Desktop\\IP\\sursa.xhtml";
+		destinatie="C:\\Users\\Cozmin\\Desktop\\IP\\destinatie.xml";
 		Fragmentare a=new Fragmentare(sursa);
 		Fragmentare b=new Fragmentare(destinatie);
 		linii_sursa=a.getFisier().getLinie();
