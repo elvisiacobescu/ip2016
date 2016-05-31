@@ -84,7 +84,11 @@ public final class KnuthMorrisPratt implements TextAligner {
     }
 
     private String[] splitInBlocks(String text) {
-        int chunks = text.length() / CHUNKSIZE + 1;
+        int chunks = text.length() / CHUNKSIZE;
+        if (text.length() % CHUNKSIZE != 0) {
+            chunks++;
+        }
+
         String[] textBlocks = new String[chunks];
 
         int start = 0;
