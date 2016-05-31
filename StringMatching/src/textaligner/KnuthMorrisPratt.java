@@ -48,16 +48,21 @@ public final class KnuthMorrisPratt implements TextAligner {
             matches[block] = searchSubString(bigger, blocks[block]);
         }
 
+        if (blocks.length == 0) {
+            firstStart = secondStart = 0;
+            return;
+        }
+
         int maxBlock = getMaxMatch(matches);
         int match = matches[maxBlock];
 
         if (match == CHUNKSIZE) {
             int smallerStart = 0;
 
-            int biggerStart = bigger.indexOf(
-                    smaller.substring(maxBlock * match,
-                                      maxBlock * match + CHUNKSIZE))
-                - maxBlock * match;
+            int biggerStart = Math.max(0,
+                    bigger.indexOf(smaller.substring(maxBlock * match,
+                                    maxBlock * match + CHUNKSIZE))
+                    - maxBlock * match);
 
             if (smaller.equals(firstText)) {
                 firstStart = smallerStart;
