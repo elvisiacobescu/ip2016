@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="856" version="1.1" width="887" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="144" x="343" y="15"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="146" x="342" y="14"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="144" x="343" y="15"/>
+<text font-family="Dialog" font-size="12" x="354" y="34">
+Se incarca cele 2 texte</text>
+<rect fill="#00ff" height="66" rx="68" ry="68" stroke="#00ff" stroke-width="1" width="238" x="327" y="199"/>
+<rect fill="#ffffff" height="68" rx="68" ry="68" stroke="#000000" stroke-width="1" width="240" x="326" y="198"/>
+<rect fill="#ffffff" height="66" rx="68" ry="68" stroke="#ffffff" stroke-width="1" width="238" x="327" y="199"/>
+<text font-family="Dialog" font-size="12" x="345" y="218">
+Se aplica algoritmul smith-waterman</text>
+<text font-family="Dialog" font-size="12" x="356" y="234">
+pentru a obinte o alinierea locala</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="238" x="39" y="199"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="240" x="38" y="198"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="238" x="39" y="199"/>
+<text font-family="Dialog" font-size="12" x="52" y="218">
+Obtinerea unei alinieri globale utilizant </text>
+<text font-family="Dialog" font-size="12" x="72" y="234">
+algoritmul Needleman-Wunsch</text>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="848" x="14" y="118"/>
+<polyline fill="none" points="422,64 422,118" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="415" x2="422" y1="106" y2="118"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="429" x2="422" y1="106" y2="118"/>
+<text font-family="Dialog" font-size="12" x="428" y="94">
+se trimit catre procesat</text>
+<polyline fill="none" points="462,124 462,199" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="455" x2="462" y1="187" y2="199"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="469" x2="462" y1="187" y2="199"/>
+<polyline fill="none" points="158,124 158,199" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="151" x2="158" y1="187" y2="199"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="165" x2="158" y1="187" y2="199"/>
+<rect fill="#00ff" height="82" rx="84" ry="84" stroke="#00ff" stroke-width="1" width="143" x="391" y="295"/>
+<rect fill="#ffffff" height="84" rx="84" ry="84" stroke="#000000" stroke-width="1" width="145" x="390" y="294"/>
+<rect fill="#ffffff" height="82" rx="84" ry="84" stroke="#ffffff" stroke-width="1" width="143" x="391" y="295"/>
+<text font-family="Dialog" font-size="12" x="407" y="314">
+Se incarca matricile </text>
+<text font-family="Dialog" font-size="12" x="402" y="330">
+de substitutie care sa </text>
+<text font-family="Dialog" font-size="12" x="409" y="346">
+contina tot alfabetul</text>
+<rect fill="#00ff" height="82" rx="84" ry="84" stroke="#00ff" stroke-width="1" width="169" x="383" y="423"/>
+<rect fill="#ffffff" height="84" rx="84" ry="84" stroke="#000000" stroke-width="1" width="171" x="382" y="422"/>
+<rect fill="#ffffff" height="82" rx="84" ry="84" stroke="#ffffff" stroke-width="1" width="169" x="383" y="423"/>
+<text font-family="Dialog" font-size="12" x="413" y="442">
+Se incearca diferite </text>
+<text font-family="Dialog" font-size="12" x="411" y="458">
+matrici de potrivire si</text>
+<text font-family="Dialog" font-size="12" x="394" y="474">
+se alegea cea cu potrivirea</text>
+<text font-family="Dialog" font-size="12" x="428" y="490">
+ cea mai mare</text>
+<polyline fill="none" points="462,264 462,295" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="455" x2="462" y1="283" y2="295"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="469" x2="462" y1="283" y2="295"/>
+<polyline fill="none" points="470,376 470,423" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="463" x2="470" y1="411" y2="423"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="477" x2="470" y1="411" y2="423"/>
+<rect fill="#00ff" height="82" rx="84" ry="84" stroke="#00ff" stroke-width="1" width="143" x="87" y="287"/>
+<rect fill="#ffffff" height="84" rx="84" ry="84" stroke="#000000" stroke-width="1" width="145" x="86" y="286"/>
+<rect fill="#ffffff" height="82" rx="84" ry="84" stroke="#ffffff" stroke-width="1" width="143" x="87" y="287"/>
+<text font-family="Dialog" font-size="12" x="103" y="306">
+Se incarca matricile </text>
+<text font-family="Dialog" font-size="12" x="98" y="322">
+de substitutie care sa </text>
+<text font-family="Dialog" font-size="12" x="105" y="338">
+contina tot alfabetul</text>
+<polyline fill="none" points="158,248 158,287" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="151" x2="158" y1="275" y2="287"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="165" x2="158" y1="275" y2="287"/>
+<rect fill="#00ff" height="82" rx="84" ry="84" stroke="#00ff" stroke-width="1" width="169" x="79" y="423"/>
+<rect fill="#ffffff" height="84" rx="84" ry="84" stroke="#000000" stroke-width="1" width="171" x="78" y="422"/>
+<rect fill="#ffffff" height="82" rx="84" ry="84" stroke="#ffffff" stroke-width="1" width="169" x="79" y="423"/>
+<text font-family="Dialog" font-size="12" x="109" y="442">
+Se incearca diferite </text>
+<text font-family="Dialog" font-size="12" x="107" y="458">
+matrici de potrivire si</text>
+<text font-family="Dialog" font-size="12" x="90" y="474">
+se alegea cea cu potrivirea</text>
+<text font-family="Dialog" font-size="12" x="124" y="490">
+ cea mai mare</text>
+<polyline fill="none" points="158,368 158,423" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="151" x2="158" y1="411" y2="423"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="165" x2="158" y1="411" y2="423"/>
+<rect fill="#000000" height="7" stroke="#000000" stroke-width="1" width="760" x="102" y="614"/>
+<polyline fill="none" points="230,504 230,614" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="223" x2="230" y1="602" y2="614"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="237" x2="230" y1="602" y2="614"/>
+<text font-family="Dialog" font-size="12" x="233" y="560">
+se trimite un procentaj</text>
+<polyline fill="none" points="469,504 469,614" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="462" x2="469" y1="602" y2="614"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="476" x2="469" y1="602" y2="614"/>
+<text font-family="Dialog" font-size="12" x="479" y="562">
+se trimite un procentaj</text>
+<rect fill="#00ff" height="82" rx="84" ry="84" stroke="#00ff" stroke-width="1" width="182" x="351" y="663"/>
+<rect fill="#ffffff" height="84" rx="84" ry="84" stroke="#000000" stroke-width="1" width="184" x="350" y="662"/>
+<rect fill="#ffffff" height="82" rx="84" ry="84" stroke="#ffffff" stroke-width="1" width="182" x="351" y="663"/>
+<text font-family="Dialog" font-size="12" x="383" y="682">
+se compara scorurile</text>
+<text font-family="Dialog" font-size="12" x="362" y="698">
+si se alex texetele cu cea mai</text>
+<text font-family="Dialog" font-size="12" x="406" y="714">
+buna aliniere</text>
+<polyline fill="none" points="438,620 438,663" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="431" x2="438" y1="651" y2="663"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="445" x2="438" y1="651" y2="663"/>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="206" x="647" y="191"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="208" x="646" y="190"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="206" x="647" y="191"/>
+<text font-family="Dialog" font-size="12" x="658" y="210">
+decidem ca aplicam si o euristica</text>
+<polyline fill="none" points="750,124 750,191" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="743" x2="750" y1="179" y2="191"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="757" x2="750" y1="179" y2="191"/>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="159" x="679" y="271"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="161" x="678" y="270"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="159" x="679" y="271"/>
+<text font-family="Dialog" font-size="12" x="690" y="290">
+Impartim textul pe blocuri</text>
+<polyline fill="none" points="750,240 750,271" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="743" x2="750" y1="259" y2="271"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="757" x2="750" y1="259" y2="271"/>
+<rect fill="#00ff" height="66" rx="68" ry="68" stroke="#00ff" stroke-width="1" width="211" x="655" y="367"/>
+<rect fill="#ffffff" height="68" rx="68" ry="68" stroke="#000000" stroke-width="1" width="213" x="654" y="366"/>
+<rect fill="#ffffff" height="66" rx="68" ry="68" stroke="#ffffff" stroke-width="1" width="211" x="655" y="367"/>
+<text font-family="Dialog" font-size="12" x="666" y="386">
+Comparam un bloc din promul text</text>
+<text font-family="Dialog" font-size="12" x="701" y="402">
+in cel de-al doilea text</text>
+<polyline fill="none" points="750,320 750,367" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="743" x2="750" y1="355" y2="367"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="757" x2="750" y1="355" y2="367"/>
+<rect fill="#00ff" height="66" rx="68" ry="68" stroke="#00ff" stroke-width="1" width="148" x="687" y="463"/>
+<rect fill="#ffffff" height="68" rx="68" ry="68" stroke="#000000" stroke-width="1" width="150" x="686" y="462"/>
+<rect fill="#ffffff" height="66" rx="68" ry="68" stroke="#ffffff" stroke-width="1" width="148" x="687" y="463"/>
+<text font-family="Dialog" font-size="12" x="698" y="482">
+Daca gasimt o potrivire</text>
+<text font-family="Dialog" font-size="12" x="704" y="498">
+alg. a gasit o aliniere</text>
+<polyline fill="none" points="760,432 760,463" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="753" x2="760" y1="451" y2="463"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="767" x2="760" y1="451" y2="463"/>
+<polyline fill="none" points="761,528 761,614" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="754" x2="761" y1="602" y2="614"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="768" x2="761" y1="602" y2="614"/>
+<text font-family="Dialog" font-size="12" x="750" y="576">
+se trimite un procentaj</text>
+<rect fill="#00ff" height="50" rx="52" ry="52" stroke="#00ff" stroke-width="1" width="170" x="359" y="791"/>
+<rect fill="#ffffff" height="52" rx="52" ry="52" stroke="#000000" stroke-width="1" width="172" x="358" y="790"/>
+<rect fill="#ffffff" height="50" rx="52" ry="52" stroke="#ffffff" stroke-width="1" width="170" x="359" y="791"/>
+<text font-family="Dialog" font-size="12" x="370" y="810">
+Se trimite catre comparare </text>
+<polyline fill="none" points="442,744 442,791" stroke="#333399" stroke-width="1"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="435" x2="442" y1="779" y2="791"/>
+<line fill="#333399" stroke="#333399" stroke-width="1" x1="449" x2="442" y1="779" y2="791"/>
+</svg>

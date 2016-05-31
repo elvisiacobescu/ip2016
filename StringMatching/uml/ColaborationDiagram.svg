@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="619" version="1.1" width="787" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="14" y="48"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="14" y="48"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="14" y="48"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="41" x2="76" y1="76" y2="76"/>
+<text font-family="Dialog" font-size="12" x="41" y="75">
+:Match</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="93" x="14" y="176"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="93" x="14" y="176"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="93" x="14" y="176"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="18" x2="103" y1="204" y2="204"/>
+<text font-family="Dialog" font-size="12" x="18" y="203">
+:TextNormalizer</text>
+<polyline fill="none" points="62,98 62,176" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="74" y="139">
+1 : normalize()</text>
+<polygon fill="#000000" points="165,128 165,137 167,137 165,146 163,137 165,137" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="165,128 165,137 167,137 165,146 163,137 165,137" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="74" y="139">
+1 : normalize()</text>
+<polygon fill="#000000" points="165,128 165,137 167,137 165,146 163,137 165,137" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="165,128 165,137 167,137 165,146 163,137 165,137" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="100" x="14" y="320"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="100" x="14" y="320"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="100" x="14" y="320"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="18" x2="110" y1="348" y2="348"/>
+<text font-family="Dialog" font-size="12" x="18" y="347">
+:FactoryProducer</text>
+<polyline fill="none" points="54,226 54,320" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="66" y="270">
+2 : runAlgorithms()</text>
+<polygon fill="#000000" points="173,259 173,268 175,268 173,277 171,268 173,268" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="173,259 173,268 175,268 173,277 171,268 173,268" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="66" y="270">
+2 : runAlgorithms()</text>
+<polygon fill="#000000" points="173,259 173,268 175,268 173,277 171,268 173,268" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="173,259 173,268 175,268 173,277 171,268 173,268" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="318" y="136"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="318" y="136"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="318" y="136"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="331" x2="394" y1="164" y2="164"/>
+<text font-family="Dialog" font-size="12" x="331" y="163">
+:TextAligner</text>
+<polyline fill="none" points="114,320 358,320 358,186" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="149" y="310">
+2.2 : runAlignAlgorithms()</text>
+<polygon fill="#000000" points="295,308 304,308 304,310 313,308 304,306 304,308" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="295,308 304,308 304,310 313,308 304,306 304,308" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="149" y="310">
+2.2 : runAlignAlgorithms()</text>
+<polygon fill="#000000" points="295,308 304,308 304,310 313,308 304,306 304,308" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="295,308 304,308 304,310 313,308 304,306 304,308" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="99" x="326" y="496"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="99" x="326" y="496"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="99" x="326" y="496"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="331" x2="420" y1="524" y2="524"/>
+<text font-family="Dialog" font-size="12" x="331" y="523">
+:TextMatchScore</text>
+<polyline fill="none" points="114,368 358,368 358,496" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="146" y="390">
+2.1 : runMatchAlgorithms()</text>
+<polygon fill="#000000" points="293,388 302,388 302,390 311,388 302,386 302,388" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="293,388 302,388 302,390 311,388 302,386 302,388" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="146" y="390">
+2.1 : runMatchAlgorithms()</text>
+<polygon fill="#000000" points="293,388 302,388 302,390 311,388 302,386 302,388" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="293,388 302,388 302,390 311,388 302,386 302,388" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="100" x="646" y="16"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="100" x="646" y="16"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="100" x="646" y="16"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="650" x2="742" y1="44" y2="44"/>
+<text font-family="Dialog" font-size="12" x="650" y="43">
+:SmithWaterman</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="121" x="646" y="88"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="121" x="646" y="88"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="121" x="646" y="88"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="650" x2="763" y1="116" y2="116"/>
+<text font-family="Dialog" font-size="12" x="650" y="115">
+:NeedlemanWunsch</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="646" y="168"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="646" y="168"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="646" y="168"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="677" x2="705" y1="196" y2="196"/>
+<text font-family="Dialog" font-size="12" x="677" y="195">
+:KMP</text>
+<polyline fill="none" points="374,136 374,48 646,48" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="423" y="36">
+2.2.1 : runSmithWaterman()</text>
+<polygon fill="#000000" points="578,34 587,34 587,36 596,34 587,32 587,34" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="578,34 587,34 587,36 596,34 587,32 587,34" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="398,186 398,216 646,216" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="464" y="204">
+2.2.3 : runKMP()</text>
+<polygon fill="#000000" points="555,202 564,202 564,204 573,202 564,200 564,202" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="555,202 564,202 564,204 573,202 564,200 564,202" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="398,136 398,112 646,112" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="401" y="102">
+2.2.2 : runNeedlemanWunsch()</text>
+<polygon fill="#000000" points="577,100 586,100 586,102 595,100 586,98 586,100" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="577,100 586,100 586,102 595,100 586,98 586,100" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="423" y="36">
+2.2.1 : runSmithWaterman()</text>
+<polygon fill="#000000" points="578,34 587,34 587,36 596,34 587,32 587,34" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="578,34 587,34 587,36 596,34 587,32 587,34" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="401" y="102">
+2.2.2 : runNeedlemanWunsch()</text>
+<polygon fill="#000000" points="577,100 586,100 586,102 595,100 586,98 586,100" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="577,100 586,100 586,102 595,100 586,98 586,100" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="464" y="204">
+2.2.3 : runKMP()</text>
+<polygon fill="#000000" points="555,202 564,202 564,204 573,202 564,200 564,202" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="555,202 564,202 564,204 573,202 564,200 564,202" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="97" x="646" y="296"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="97" x="646" y="296"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="97" x="646" y="296"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="650" x2="739" y1="324" y2="324"/>
+<text font-family="Dialog" font-size="12" x="650" y="323">
+:HaminDistance</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="127" x="646" y="376"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="127" x="646" y="376"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="127" x="646" y="376"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="650" x2="769" y1="404" y2="404"/>
+<text font-family="Dialog" font-size="12" x="650" y="403">
+:LevenshteinDistance</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="646" y="456"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="646" y="456"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="646" y="456"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="658" x2="723" y1="484" y2="484"/>
+<text font-family="Dialog" font-size="12" x="658" y="483">
+:JaroWinker</text>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="646" y="536"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="646" y="536"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="646" y="536"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="677" x2="704" y1="564" y2="564"/>
+<text font-family="Dialog" font-size="12" x="677" y="563">
+:LCS</text>
+<polyline fill="none" points="382,496 382,320 646,320" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="383" y="308">
+2.1.1 : runHamingDistance()</text>
+<polygon fill="#000000" points="542,306 551,306 551,308 560,306 551,304 551,306" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="542,306 551,306 551,308 560,306 551,304 551,306" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="414,496 414,400 646,400" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="439" y="388">
+2.1.2 : runLevenshteinDistance()</text>
+<polygon fill="#000000" points="621,386 630,386 630,388 639,386 630,384 630,386" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="621,386 630,386 630,388 639,386 630,384 630,386" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="425,506 646,506" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="466" y="494">
+2.1.3 : runJaroWinker()</text>
+<polygon fill="#000000" points="594,492 603,492 603,494 612,492 603,490 603,492" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="594,492 603,492 603,494 612,492 603,490 603,492" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="414,546 414,568 646,568" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="476" y="556">
+2.1.4 : runLCS()</text>
+<polygon fill="#000000" points="566,554 575,554 575,556 584,554 575,552 575,554" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="566,554 575,554 575,556 584,554 575,552 575,554" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="383" y="308">
+2.1.1 : runHamingDistance()</text>
+<polygon fill="#000000" points="542,306 551,306 551,308 560,306 551,304 551,306" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="542,306 551,306 551,308 560,306 551,304 551,306" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="439" y="388">
+2.1.2 : runLevenshteinDistance()</text>
+<polygon fill="#000000" points="621,386 630,386 630,388 639,386 630,384 630,386" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="621,386 630,386 630,388 639,386 630,384 630,386" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="466" y="494">
+2.1.3 : runJaroWinker()</text>
+<polygon fill="#000000" points="594,492 603,492 603,494 612,492 603,490 603,492" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="594,492 603,492 603,494 612,492 603,490 603,492" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="476" y="556">
+2.1.4 : runLCS()</text>
+<polygon fill="#000000" points="566,554 575,554 575,556 584,554 575,552 575,554" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="566,554 575,554 575,556 584,554 575,552 575,554" stroke="#000000" stroke-width="1"/>
+<rect fill="#00ff" height="50" stroke="#00ff" stroke-width="1" width="90" x="14" y="520"/>
+<rect fill="#ffffff" height="50" stroke="#ffffff" stroke-width="1" width="90" x="14" y="520"/>
+<rect fill="none" height="50" stroke="#000000" stroke-width="1" width="90" x="14" y="520"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="48" x2="69" y1="548" y2="548"/>
+<text font-family="Dialog" font-size="12" x="48" y="547">
+:API</text>
+<polyline fill="none" points="54,370 54,520" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="66" y="462">
+3 : processRequest()</text>
+<polygon fill="#000000" points="188,451 188,460 190,460 188,469 186,460 188,460" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="188,451 188,460 190,460 188,469 186,460 188,460" stroke="#000000" stroke-width="1"/>
+<text font-family="Dialog" font-size="12" x="66" y="462">
+3 : processRequest()</text>
+<polygon fill="#000000" points="188,451 188,460 190,460 188,469 186,460 188,460" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="188,451 188,460 190,460 188,469 186,460 188,460" stroke="#000000" stroke-width="1"/>
+</svg>

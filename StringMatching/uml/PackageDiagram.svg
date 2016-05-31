@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="428" version="1.1" width="692" xmlns="http://www.w3.org/2000/svg">
+<polygon fill="#ffffff" points="14,14 628,14 628,38 677,38 677,413 14,413 14,14" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="614" x="14" y="14"/>
+<text font-family="Dialog" font-size="12" x="19" y="28">
+stringMatching</text>
+<rect fill="none" height="375" stroke="#000000" stroke-width="1" width="663" x="14" y="38"/>
+<polygon fill="#ffffff" points="54,78 220,78 220,102 269,102 269,389 54,389 54,78" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="166" x="54" y="78"/>
+<text font-family="Dialog" font-size="12" x="59" y="92">
+AlgFactory</text>
+<rect fill="none" height="287" stroke="#000000" stroke-width="1" width="215" x="54" y="102"/>
+<polygon fill="#ffffff" points="86,262 196,262 196,286 245,286 245,365 86,365 86,262" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="110" x="86" y="262"/>
+<text font-family="Dialog" font-size="12" x="91" y="276">
+textMatchScore</text>
+<rect fill="none" height="79" stroke="#000000" stroke-width="1" width="159" x="86" y="286"/>
+<polygon fill="#ffffff" points="398,94 491,94 491,118 540,118 540,193 398,193 398,94" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="93" x="398" y="94"/>
+<text font-family="Dialog" font-size="12" x="403" y="108">
+textNormalizer</text>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="142" x="398" y="118"/>
+<polygon fill="#ffffff" points="398,278 487,278 487,302 536,302 536,377 398,377 398,278" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="89" x="398" y="278"/>
+<text font-family="Dialog" font-size="12" x="403" y="292">
+match</text>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="138" x="398" y="302"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="398" x2="393" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="388" x2="383" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="378" x2="373" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="368" x2="363" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="358" x2="353" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="348" x2="343" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="338" x2="333" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="328" x2="323" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="318" x2="313" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="308" x2="303" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="298" x2="293" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="288" x2="283" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="278" x2="273" y1="354" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="282" x2="270" y1="347" y2="354"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="282" x2="270" y1="361" y2="354"/>
+<text font-family="Dialog" font-size="12" x="293" y="277">
+&lt;&lt;access&gt;</text>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="278" y2="273"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="268" y2="263"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="258" y2="253"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="248" y2="243"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="238" y2="233"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="228" y2="223"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="218" y2="213"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="208" y2="203"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="430" x2="430" y1="198" y2="194"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="437" x2="430" y1="206" y2="194"/>
+<line fill="#000000" stroke="#000000" stroke-width="1" x1="423" x2="430" y1="206" y2="194"/>
+<text font-family="Dialog" font-size="12" x="432" y="240">
+&lt;&lt;access&gt;&gt;</text>
+<polygon fill="#ffffff" points="86,126 196,126 196,150 245,150 245,237 86,237 86,126" stroke="#ffffff" stroke-width="1"/>
+<rect fill="none" height="24" stroke="#000000" stroke-width="1" width="110" x="86" y="126"/>
+<text font-family="Dialog" font-size="12" x="91" y="140">
+textAligner</text>
+<rect fill="none" height="87" stroke="#000000" stroke-width="1" width="159" x="86" y="150"/>
+</svg>
