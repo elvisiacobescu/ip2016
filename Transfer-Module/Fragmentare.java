@@ -1,5 +1,3 @@
-package transfer.ip.IP;
-
 import java.io.IOException;
 
 public class Fragmentare {
@@ -7,7 +5,7 @@ public class Fragmentare {
 	private Tag[] taguri;
 	
 	public Fragmentare(String cale) throws IOException {
-		this.taguri = new Tag[100];
+		this.taguri = new Tag[1000];
 		this.fisier = new Parsare();
 		this.fisier.Parseaza(cale);
 		this.fragmentare();
@@ -40,68 +38,82 @@ public class Fragmentare {
 	public void fragmentare() {
 		for(int i=0; i<taguri.length; i++)
 			taguri[i] = new Tag();
-		int contor_tag = -1;
-		int contor_linii = 0;
-		while(contor_linii<fisier.getContor_linii()) {
-			if("<body>".equals(fisier.getLinie(contor_linii))) 
-				break;
-			contor_linii++;
-		}
-		contor_linii++;
-		for(int i=contor_linii; i<fisier.getContor_linii(); i++)
-			for(int j=0; j<fisier.getLinie(i).length()-1; j++)
-				if(fisier.getLinie(i).charAt(j)=='<' && fisier.getLinie(i).charAt(j+1)!='/')
-					for(int k=j+1; k<fisier.getLinie(i).length(); k++)
-						if(fisier.getLinie(i).charAt(k)=='>') {
-							String[] nume_tag = new String[2];
-							if(fisier.getLinie(i).indexOf(' ')>=0) {
-								nume_tag = fisier.getLinie(i).substring(j, k).split(" ", 2);
-								nume_tag[0]=nume_tag[0].substring(1, nume_tag[0].length());
-								if(nume_tag.length>1)
-									if(nume_tag[1].indexOf('>')>=-0)
-										nume_tag[1]=nume_tag[1].substring(0, nume_tag[1].indexOf('>'));
-							}
-							else {
-								nume_tag[0]=fisier.getLinie(i).substring(j+1, k);
-								nume_tag[1]="";
-							}
-							for(int a=i; a<fisier.getContor_linii(); a++) {
-								int b=0;
-								if(a==0 && k+1<fisier.getLinie(i).length())
-									b=k+1;
-								for(; b<fisier.getLinie(a).length()-1; b++)
-									if(fisier.getLinie(a).charAt(b)=='<' && fisier.getLinie(a).charAt(b+1)=='/')
-										for(int c=b+1; c<fisier.getLinie(a).length(); c++)
-											if(fisier.getLinie(a).charAt(c)=='>') 
-												if(nume_tag[0].trim().equals(fisier.getLinie(a).substring(b+2, c).trim()))
-														if(!"body".equals(nume_tag[0]) || !"head".equals(nume_tag[0])) {
-															contor_tag++;
-															taguri[contor_tag].setPozitieInceput(i);
-															taguri[contor_tag].setPozitie_linie_inceput(j);
-															taguri[contor_tag].setDenumire(nume_tag[0]);
-															if(nume_tag.length>1)
-																taguri[contor_tag].setProprietate(nume_tag[1]);
-															taguri[contor_tag].setPozitie_linie_sfarsit(k);
-															taguri[contor_tag].setPozitieFinal(a);
-															taguri[contor_tag].setPozitie_linie_sfarsit1(c);
-															taguri[contor_tag].setPozitie_linie_inceput1(b);
-														}
-							}
-						}
-		/*
-		for(int i=0; i<contor_tag-1; i++)
-			for(int j=i+1; j<contor_tag; j++)
-				if(taguri[i].getDenumire().equals(taguri[j].getDenumire())) {
-					if(taguri[i].getPozitieInceput()==taguri[j].getPozitieInceput())
-						if(taguri[i].getPozitie_linie_inceput()==taguri[j].getPozitie_linie_inceput()) {
-							contor_tag=stergeTag(j);
-							j--;
-						}
+		String[] deschidere = new String[taguri.length];
+		int[] pozitie_inceput_deschis = new int[taguri.length]; 
+		int[] pozitie_linie_deschis = new int[taguri.length];
+		String[] inchidere = new String[taguri.length];
+		int[] pozitie_inceput_inchis = new int[taguri.length];
+		int[] pozitie_linie_inchis = new int[taguri.length];
+		boolean tag_deschis = false, tag_inchis = false;
+		int tag_start_deschidere = 0, tag_start_inchidere = 0, contor_tag_deschis = 0, contor_tag_inchis = 0;
+		try {
+		for(int i=0; i<fisier.getContor_linii(); i++)
+			for(int j=0; j<fisier.getLinie(i).length(); j++)
+				if(fisier.getLinie(i).charAt(j)=='<' && fisier.getLinie(i).charAt(j+1)!='/') {
+					tag_deschis = true;
+					tag_start_deschidere = j+1;
 				}
-				else if(taguri[i].getPozitieFinal()==taguri[j].getPozitieFinal())
-						if(taguri[i].getPozitie_linie_sfarsit()==taguri[j].getPozitie_linie_sfarsit()) {
-							contor_tag=stergeTag(j);
-							j--;
-						}*/
+				else if(fisier.getLinie(i).charAt(j)=='>' && tag_deschis) {
+					tag_deschis = false;
+					pozitie_inceput_deschis[contor_tag_deschis]=tag_start_deschidere;
+					pozitie_linie_deschis[contor_tag_deschis]=i;
+					deschidere[contor_tag_deschis++]=fisier.getLinie(i).substring(tag_start_deschidere, j);
+				}
+				else if(fisier.getLinie(i).charAt(j)=='<' && fisier.getLinie(i).charAt(j+1)=='/') {
+					tag_inchis = true;
+					tag_start_inchidere = j+2;
+				}
+				else if(fisier.getLinie(i).charAt(j)=='>' && tag_inchis) {
+					tag_inchis = false;
+					pozitie_inceput_inchis[contor_tag_inchis]=tag_start_inchidere;
+					pozitie_linie_inchis[contor_tag_inchis]=i;
+					inchidere[contor_tag_inchis++]=fisier.getLinie(i).substring(tag_start_inchidere, j);
+				}
+		}
+		catch(IndexOutOfBoundsException e) {}
+		Tag[] tag_aux = new Tag[taguri.length];
+		for(int i=0; i<tag_aux.length; i++)
+			tag_aux[i]=new Tag("","",0,0,0,0);
+		int contor_tag = 0;
+		int[] aux_deschidere = new int[taguri.length];
+		int[] aux_inchidere = new int[taguri.length];
+		for(int i=0; i<aux_deschidere.length; i++) 
+			aux_deschidere[i]=0;
+		for(int i=0; i<aux_inchidere.length; i++) 
+			aux_inchidere[i]=0;
+		for(int i=0; i<contor_tag_deschis; i++)
+			for(int j=i+1; j<contor_tag_deschis-1; j++)
+				if(deschidere[i].equals(deschidere[j]))
+					aux_deschidere[i]++;
+		for(int i=contor_tag_deschis-2; i>=0; i--)
+			if(deschidere[i]==deschidere[contor_tag_deschis-1]) {
+				aux_deschidere[contor_tag_deschis-1]=aux_deschidere[i]+1;
+				break;
+			}
+		for(int i=0; i<contor_tag_inchis; i++)
+			for(int j=i+1; j<contor_tag_inchis-1; j++)
+				if(inchidere[i].equals(inchidere[j]))
+						aux_inchidere[i]++;
+		for(int i=0; i<contor_tag_deschis; i++)
+			if(!"body".equals(deschidere[i]) && !"xhtml".equals(deschidere[i]) && !"xml".equals(deschidere[i]) && !"head".equals(deschidere[i]) && !"title".equals(deschidere[i]))
+				for(int j=0; j<contor_tag_inchis; j++)
+					if(!"body".equals(inchidere[j]) && !"xhtml".equals(inchidere[j]) && !"xml".equals(inchidere[j]) && !"head".equals(inchidere[j]) && !"title".equals(inchidere[j])) {
+						String[] aux_spargere = new String[2];
+						aux_spargere=deschidere[i].split(" ",2);
+						if(aux_spargere[0].equals(inchidere[j]) && aux_deschidere[i]==aux_inchidere[j] ) {
+							tag_aux[contor_tag].setDenumire(inchidere[j]);
+							if(aux_spargere.length==2)
+								tag_aux[contor_tag].setProprietate(aux_spargere[1]);
+							tag_aux[contor_tag].setPozitie_linie_inceput(pozitie_inceput_deschis[i]-1);
+							tag_aux[contor_tag].setPozitie_linie_inceput1(pozitie_inceput_deschis[i]+deschidere[i].length()+1);
+							tag_aux[contor_tag].setPozitie_linie_sfarsit(pozitie_inceput_inchis[j]-2);
+							tag_aux[contor_tag].setPozitie_linie_sfarsit1(pozitie_inceput_inchis[j]+inchidere[j].length()+2);
+							tag_aux[contor_tag].setPozitieInceput(pozitie_linie_deschis[i]);
+							tag_aux[contor_tag].setPozitieFinal(pozitie_linie_inchis[j]);
+							contor_tag++;
+							break;
+						}
+					}
+		setTaguri(tag_aux);
 	}
 }
