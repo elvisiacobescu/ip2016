@@ -15,10 +15,10 @@ public class StringMatching {
 
 	private static AbstractFactory textAlignerFactory;
 	private static AbstractFactory alignmentScoreFactory;
-
-	private static void initParsers() throws AlignmentParserException {
-		firstFile = new ParserXMLFile("../tests/samples/slov1a.txt");
-		secondFile = new ParserXMLFile("../tests/samples/slov1b.txt");
+	
+	private static void initParsers(String filePathOne, String filePathTwo) throws AlignmentParserException {
+		firstFile = new ParserXMLFile(filePathOne);
+		secondFile = new ParserXMLFile(filePathTwo);
 		normalizer = new TextNormalizer();
 	}
 
@@ -27,10 +27,10 @@ public class StringMatching {
 		alignmentScoreFactory = FactoryProducer.getFactory("Score");
 	}
 
-	public static List<AlignmentPair> getParagraphPairs()
+	public static List<AlignmentPair> getParagraphPairs(String filePathOne, String filePathTwo)
 			throws AlignmentParserException, AlignmentFactoryException {
 
-		initParsers();
+		initParsers(filePathOne, filePathTwo);
 		initFactories();
 
 		ArrayList<AlignmentPair> result = new ArrayList<AlignmentPair>();
@@ -113,15 +113,16 @@ public class StringMatching {
 
 				AlignmentPair jPair = list.get(j);
 				if( iPair.getFirstParagraph() == jPair.getFirstParagraph() ||
-						iPair.getSecondParagraph() == jPair.getSecondParagraph() ){
+						iPair.getSecondParagraph() == jPair.getSecondParagraph() ||
+						( iPair.getFirstParagraph() == jPair.getSecondParagraph() &&
+							iPair.getSecondParagraph() == jPair.getFirstParagraph())
+					){
 					list.remove( j );
 					--j;
 				}
-
 			}
 		}
 	}
 
-	
 
 }
