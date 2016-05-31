@@ -12,7 +12,7 @@ public class AlignmentPair {
     }
 
     public AlignmentPair(
-            Paragraph firstParagrpah,
+            Paragraph firstParagraph,
             Paragraph secondParagraph,
             int startFirstParagraph,
             int startSecondParagraph,
@@ -65,5 +65,17 @@ public class AlignmentPair {
 
     public double getScore() {
         return score;
+    }
+    
+    @Override
+	public String toString(){
+		//return "(" + this.getFirstParagraph().getParagraphNum() + "," + this.getSecondParagraph().getParagraphNum() + "," + this.getScore() + ")";
+    	String str = "";
+    	str += this.firstParagraph;
+    	str += " start: " + this.startFirstParagraph + '\n';
+    	str += this.secondParagraph;
+    	str += " start: " + this.startSecondParagraph + '\n';
+    	str += "Score: " + this.score;
+    	return str;
     }
 }
