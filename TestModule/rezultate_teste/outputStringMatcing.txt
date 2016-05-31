@@ -1,0 +1,1082 @@
+"C:\Program Files\Java\jdk1.8.0_66\bin\java" -Didea.launcher.port=7533 "-Didea.launcher.bin.path=E:\IntelliJ IDEA Community Edition 2016.1.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_66\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\rt.jar;C:\Users\Minion\IdeaProjects\Automated Test Cases IP\out\production\Automated Test Cases IP;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\junit-4.12.jar;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\hamcrest-core-1.3.jar;D:\jaligner.jar;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain StringMatching.src.Main
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.3995979428291321
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: SWG
+Calculator: Levenshtein
+Score: -3.481481481481482
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: SWG
+Calculator: LCS
+Score: 20.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.44952327013015747
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: NWG
+Calculator: Levenshtein
+Score: -3.3571428571428568
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: NWG
+Calculator: LCS
+Score: 20.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.44952327013015747
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: KMP
+Calculator: Levenshtein
+Score: -3.3571428571428568
+
+First Paragraph ID: -50
+Second Paragraph ID: -132
+Aligner: KMP
+Calculator: LCS
+Score: 20.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.4811207056045532
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.33333333333333326
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: SWG
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5260747969150543
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.0714285714285714
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: NWG
+Calculator: LCS
+Score: 11.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5260747969150543
+
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.0714285714285714
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -251
+Aligner: KMP
+Calculator: LCS
+Score: 11.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.384859561920166
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.15384615384615374
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: SWG
+Calculator: LCS
+Score: 8.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.48352575302124023
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.16666666666666674
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: NWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.48352575302124023
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.16666666666666674
+
+First Paragraph ID: -50
+Second Paragraph ID: -190
+Aligner: KMP
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.5029476583003998
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: SWG
+Calculator: Levenshtein
+Score: -10.807692307692308
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: SWG
+Calculator: LCS
+Score: 19.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5545012950897217
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: NWG
+Calculator: Levenshtein
+Score: -10.285714285714286
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: NWG
+Calculator: LCS
+Score: 19.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5545012950897217
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: KMP
+Calculator: Levenshtein
+Score: -10.285714285714286
+
+First Paragraph ID: -50
+Second Paragraph ID: -94
+Aligner: KMP
+Calculator: LCS
+Score: 19.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.4188311696052551
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: SWG
+Calculator: Levenshtein
+Score: -1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: SWG
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5734255015850067
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: NWG
+Calculator: Levenshtein
+Score: 0.0357142857142857
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: NWG
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5734255015850067
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: KMP
+Calculator: Levenshtein
+Score: 0.0357142857142857
+
+First Paragraph ID: -50
+Second Paragraph ID: -216
+Aligner: KMP
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.5179824531078339
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: SWG
+Calculator: Levenshtein
+Score: 0.052631578947368474
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: SWG
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5752164423465729
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.09090909090909083
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: NWG
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5752164423465729
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.09090909090909083
+
+First Paragraph ID: -50
+Second Paragraph ID: -235
+Aligner: KMP
+Calculator: LCS
+Score: 5.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.40415138006210327
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.23076923076923084
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: SWG
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5039682388305664
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.2777777777777777
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: NWG
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5039682388305664
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.2777777777777777
+
+First Paragraph ID: -50
+Second Paragraph ID: -35
+Aligner: KMP
+Calculator: LCS
+Score: 6.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: HammingDistance
+Score: 0.30000000000000004
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.3333333134651184
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: Levenshtein
+Score: 0.30000000000000004
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.569047600030899
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: Levenshtein
+Score: -1.5
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.569047600030899
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: Levenshtein
+Score: -1.5
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.5317941606044769
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.7142857142857142
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: SWG
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5773155391216278
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.4285714285714286
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: NWG
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5773155391216278
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.4285714285714286
+
+First Paragraph ID: -50
+Second Paragraph ID: -4
+Aligner: KMP
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.490037739276886
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.5714285714285714
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: SWG
+Calculator: LCS
+Score: 11.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5476190149784088
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.3928571428571428
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: NWG
+Calculator: LCS
+Score: 11.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5476190149784088
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: KMP
+Calculator: Levenshtein
+Score: StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+-0.3928571428571428
+
+First Paragraph ID: -50
+Second Paragraph ID: -204
+Aligner: KMP
+Calculator: LCS
+Score: 11.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.47806239128112793
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: SWG
+Calculator: Levenshtein
+Score: -4.076923076923077
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: SWG
+Calculator: LCS
+Score: 19.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.542339563369751
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: NWG
+Calculator: Levenshtein
+Score: -4.892857142857143
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: NWG
+Calculator: LCS
+Score: 19.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.542339563369751
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: KMP
+Calculator: Levenshtein
+Score: -4.892857142857143
+
+First Paragraph ID: -50
+Second Paragraph ID: -113
+Aligner: KMP
+Calculator: LCS
+Score: 19.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.40957194566726685
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: SWG
+Calculator: Levenshtein
+Score: 0.11111111111111116
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: SWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5088522434234619
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: NWG
+Calculator: Levenshtein
+Score: 0.07692307692307687
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: NWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5088522434234619
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: KMP
+Calculator: Levenshtein
+Score: StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+0.07692307692307687
+
+First Paragraph ID: -50
+Second Paragraph ID: -17
+Aligner: KMP
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: SWG
+Calculator: Levenshtein
+Score: -Infinity
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: SWG
+Calculator: LCS
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: NWG
+Calculator: Levenshtein
+Score: -27.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: NWG
+Calculator: LCS
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: KMP
+Calculator: Levenshtein
+Score: -27.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -211
+Aligner: KMP
+Calculator: LCS
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.42438673973083496
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: SWG
+Calculator: Levenshtein
+Score: -1.0909090909090908
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: SWG
+Calculator: LCS
+Score: 7.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5014429986476898
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: NWG
+Calculator: Levenshtein
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: NWG
+Calculator: LCS
+Score: 8.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5014429986476898
+
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: KMP
+Calculator: Levenshtein
+Score: 0.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -250
+Aligner: KMP
+Calculator: LCS
+Score: 8.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.521212100982666
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.75
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: SWG
+Calculator: LCS
+Score: 9.0
+
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5175983607769012
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.3571428571428572
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: NWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5175983607769012
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: KMP
+Calculator: Levenshtein
+Score: StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+-0.3571428571428572
+
+First Paragraph ID: -50
+Second Paragraph ID: -219
+Aligner: KMP
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.4660894274711609
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.19047619047619047
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: SWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5175983607769012
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: NWG
+Calculator: Levenshtein
+Score: -0.3214285714285714
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: NWG
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5175983607769012
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.3214285714285714
+
+First Paragraph ID: -50
+Second Paragraph ID: -22
+Aligner: KMP
+Calculator: LCS
+Score: 10.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.4121212363243103
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: SWG
+Calculator: Levenshtein
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: SWG
+Calculator: LCS
+Score: 4.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.5811688005924225
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: NWG
+Calculator: Levenshtein
+Score: -1.1818181818181817
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: NWG
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.5811688005924225
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: KMP
+Calculator: Levenshtein
+Score: -1.1818181818181817
+
+First Paragraph ID: -50
+Second Paragraph ID: -227
+Aligner: KMP
+Calculator: LCS
+Score: 5.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.4994047284126282
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: SWG
+Calculator: Levenshtein
+Score: -0.0625
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: SWG
+Calculator: LCS
+Score: 7.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.4650793671607971
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: NWG
+Calculator: Levenshtein
+Score: StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+StringMatching.src.textmatchscore.AlignmentScoreException: Hamming Distance is undefined for sequences of different lengths.
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at StringMatching.src.textaligner.KnuthMorrisPratt.searchSubString(KnuthMorrisPratt.java:130)
+	at StringMatching.src.textaligner.KnuthMorrisPratt.align(KnuthMorrisPratt.java:46)
+	at StringMatching.src.Main.main(Main.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:144)
+-0.03571428571428581
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: NWG
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.4650793671607971
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: KMP
+Calculator: Levenshtein
+Score: -0.03571428571428581
+
+First Paragraph ID: -50
+Second Paragraph ID: -246
+Aligner: KMP
+Calculator: LCS
+Score: 9.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: SWG
+Calculator: Levenshtein
+Score: -Infinity
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: SWG
+Calculator: LCS
+Score: 0.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 1.0
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: NWG
+Calculator: Levenshtein
+Score: -Infinity
+
+First Paragraph ID: -50
+Second Paragraph ID: -150
+Aligner: NWG
+Calculator: LCS
+Score: 0.0
+
+
+Process finished with exit code 1

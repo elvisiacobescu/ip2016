@@ -1,0 +1,74 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<!-- Document XML transmis de Vimeo ca raspuns la o cerere GET
+  (invocare a unui serviciu Web via API-ul public oferit).
+-->
+<videos>
+    <video>
+        <id>
+            6238577
+        </id>
+        <title>
+            Hurl Overview
+        </title>
+        <description>
+            Hurl makes HTTP requests. This video shows you how.
+        </description>
+        <url>
+            http://vimeo.com/6238577
+        </url>
+        <upload_date>
+            2009-08-23 18:50:02
+        </upload_date>
+        <thumbnail_small>
+            http://b.vimeocdn.com/ts/229/040/22904084_100.jpg
+        </thumbnail_small>
+        <thumbnail_medium>
+            http://b.vimeocdn.com/ts/229/040/22904084_200.jpg
+        </thumbnail_medium>
+        <thumbnail_large>
+            http://b.vimeocdn.com/ts/229/040/22904084_640.jpg
+        </thumbnail_large>
+        <user_name>
+            defunkt
+        </user_name>
+        <user_url>
+            http://vimeo.com/defunkt
+        </user_url>
+        <user_portrait_small>
+            http://b.vimeocdn.com/ps/222/256/2222569_30.jpg
+        </user_portrait_small>
+        <user_portrait_medium>
+            http://b.vimeocdn.com/ps/222/256/2222569_75.jpg
+        </user_portrait_medium>
+        <user_portrait_large>
+            http://b.vimeocdn.com/ps/222/256/2222569_100.jpg
+        </user_portrait_large>
+        <user_portrait_huge>
+            http://b.vimeocdn.com/ps/222/256/2222569_300.jpg
+        </user_portrait_huge>
+        <stats_number_of_likes>
+            33
+        </stats_number_of_likes>
+        <stats_number_of_plays>
+            5800
+        </stats_number_of_plays>
+        <stats_number_of_comments>
+            4
+        </stats_number_of_comments>
+        <duration>
+            157
+        </duration>
+        <width>
+            494
+        </width>
+        <height>
+            352
+        </height>
+        <tags>
+            rails, railsrumble, http, curl, hurl
+        </tags>
+        <embed_privacy>
+            anywhere
+        </embed_privacy>
+    </video>
+</videos>

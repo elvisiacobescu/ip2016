@@ -1,0 +1,72 @@
+"C:\Program Files\Java\jdk1.8.0_66\bin\java" -Didea.launcher.port=7536 "-Didea.launcher.bin.path=E:\IntelliJ IDEA Community Edition 2016.1.1\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_66\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_66\jre\lib\rt.jar;C:\Users\Minion\IdeaProjects\Automated Test Cases IP\out\production\Automated Test Cases IP;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\junit-4.12.jar;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\hamcrest-core-1.3.jar;D:\jaligner.jar;E:\IntelliJ IDEA Community Edition 2016.1.1\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain StringMatching.src.Main
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: SWG
+Calculator: HammingDistance
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: SWG
+Calculator: JaroWinkler
+Score: 0.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: SWG
+Calculator: Levenshtein
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: SWG
+Calculator: LCS
+Score: 12.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: NWG
+Calculator: HammingDistance
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: NWG
+Calculator: JaroWinkler
+Score: 0.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: NWG
+Calculator: Levenshtein
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: NWG
+Calculator: LCS
+Score: 12.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: KMP
+Calculator: HammingDistance
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: KMP
+Calculator: JaroWinkler
+Score: 0.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: KMP
+Calculator: Levenshtein
+Score: 1.0
+
+First Paragraph ID: -41
+Second Paragraph ID: -44
+Aligner: KMP
+Calculator: LCS
+Score: 12.0
