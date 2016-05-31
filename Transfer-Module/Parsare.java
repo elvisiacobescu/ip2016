@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Parsare {
 	
 	private String path;
-	private String linie[]=new String[1000];
+	private String linie[]=new String[10000];
 	private int contor_linii=0;
 	
 	public int getContor_linii() {
@@ -41,13 +41,15 @@ public class Parsare {
 			this.linie[i] = linie[i];
 	}
 
-	public Parsare(){
+	public Parsare() {
 		path = new String();
-		linie = new String[1000];
+		linie = new String[10000];
 	}
 	
 	public void Parseaza(String cale) throws IOException{
 		path=cale;
+		for(int i=contor_linii+1; i<linie.length; i++)
+			this.linie[i]="";
 		BufferedReader br = new BufferedReader(new FileReader(cale));
 		try {
 		    String line = br.readLine();
