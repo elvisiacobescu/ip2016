@@ -156,10 +156,6 @@ public class StringMatching {
 		// Create a new `tagterm` object using a path to the Python executable.
 		Tagterm tagterm = new Tagterm("../../Tagterminator/bin/tagterm.exe");
 
-		// Validate the content of an HTML file.
-		boolean validate_resp = tagterm.validate(path.toString());
-		System.out.println("validate: " + validate_resp);
-
 		// Convert a HTML file to XHTML.
 		String converted_file = tagterm.convert(path.toString());
 		System.out.println("convert: " + converted_file);
