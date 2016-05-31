@@ -73,7 +73,7 @@ public class Fragmentare {
 		catch(IndexOutOfBoundsException e) {}
 		Tag[] tag_aux = new Tag[taguri.length];
 		for(int i=0; i<tag_aux.length; i++)
-			tag_aux[i]=new Tag("","",0,0,0,0);
+			tag_aux[i]=new Tag("","",0,0,0,0,0,0);
 		int contor_tag = 0;
 		int[] aux_deschidere = new int[taguri.length];
 		int[] aux_inchidere = new int[taguri.length];
@@ -105,9 +105,9 @@ public class Fragmentare {
 							if(aux_spargere.length==2)
 								tag_aux[contor_tag].setProprietate(aux_spargere[1]);
 							tag_aux[contor_tag].setPozitie_linie_inceput(pozitie_inceput_deschis[i]-1);
-							tag_aux[contor_tag].setPozitie_linie_inceput1(pozitie_inceput_deschis[i]+deschidere[i].length()+1);
+							tag_aux[contor_tag].setPozitie_linie_inceput_1(pozitie_inceput_deschis[i]+deschidere[i].length()+1);
 							tag_aux[contor_tag].setPozitie_linie_sfarsit(pozitie_inceput_inchis[j]-2);
-							tag_aux[contor_tag].setPozitie_linie_sfarsit1(pozitie_inceput_inchis[j]+inchidere[j].length()+2);
+							tag_aux[contor_tag].setPozitie_linie_sfarsit_1(pozitie_inceput_inchis[j]+inchidere[j].length()+2);
 							tag_aux[contor_tag].setPozitieInceput(pozitie_linie_deschis[i]);
 							tag_aux[contor_tag].setPozitieFinal(pozitie_linie_inchis[j]);
 							contor_tag++;
