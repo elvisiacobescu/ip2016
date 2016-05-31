@@ -105,7 +105,7 @@ public final class KnuthMorrisPratt implements TextAligner {
         PartialMatchTable[i] = j;
         while (i < ptrnLen) {
             while (j >= 0 && ptrn.charAt(i) != ptrn.charAt(j)) {
-                // if there is mismatch consider next widest border
+                /** If there is a mismatch, consider the next widest border. */
                 j = PartialMatchTable[j];
             }
             i++;
@@ -117,12 +117,9 @@ public final class KnuthMorrisPratt implements TextAligner {
     }
 
     private int searchSubString(String text, String ptrn) {
-
-        // pattern and text lengths
         int ptrnLen = ptrn.length();
         int txtLen = text.length();
 
-        // initialize new array and preprocess the pattern
         int[] PartialMatchTable = preProcessPattern(ptrn);
 
         int i = 0;
@@ -136,8 +133,8 @@ public final class KnuthMorrisPratt implements TextAligner {
             i++;
             j++;
 
-            // a match is found
             if (j == ptrnLen) {
+                /** A match is found. */
                 return j + 1;
             }
         }
