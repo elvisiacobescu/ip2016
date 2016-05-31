@@ -1,4 +1,5 @@
 import java.lang.Double;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,119 +10,135 @@ import textmatchscore.*;
 
 public class StringMatching {
 
-	private static ParserXMLFile firstFile;
-	private static ParserXMLFile secondFile;
-	private static TextNormalizer normalizer;
+    private Path firstPath;
+    private Path secondPath;
 
-	private static AbstractFactory textAlignerFactory;
-	private static AbstractFactory alignmentScoreFactory;
+    private ParserXMLFile firstFile;
+    private ParserXMLFile secondFile;
+    private TextNormalizer normalizer;
 
-	private static void initParsers() throws AlignmentParserException {
-		firstFile = new ParserXMLFile("../tests/samples/slov1a.txt");
-		secondFile = new ParserXMLFile("../tests/samples/slov1b.txt");
-		normalizer = new TextNormalizer();
-	}
+    private AbstractFactory textAlignerFactory;
+    private AbstractFactory alignmentScoreFactory;
 
-	private static void initFactories() throws AlignmentFactoryException {
-		textAlignerFactory = FactoryProducer.getFactory("Aligner");
-		alignmentScoreFactory = FactoryProducer.getFactory("Score");
-	}
+    public StringMatching() {
+    }
 
-	public static List<AlignmentPair> getParagraphPairs()
-			throws AlignmentParserException, AlignmentFactoryException {
+    public StringMatching(Path firstPath, Path secondPath) {
+        setFirstPath(firstPath);
+        setSecondPath(secondPath);
+    }
 
-		initParsers();
-		initFactories();
+    public void setFirstPath(Path firstPath) {
+        this.firstPath = firstPath;
+    }
 
-		ArrayList<AlignmentPair> result = new ArrayList<AlignmentPair>();
+    public void setSecondPath(Path secondPath) {
+        this.secondPath = secondPath;
+    }
 
-		for (Paragraph firstParagraph : firstFile.getParagraphs()) {
+    private void initParsers() throws AlignmentParserException {
+        firstFile = new ParserXMLFile(firstPath);
+        secondFile = new ParserXMLFile(secondPath);
+        normalizer = new TextNormalizer();
+    }
 
-			normalizer.setInitialText(firstParagraph.getParagraphContent());
-			normalizer.normalize();
-			firstParagraph.setParagraphContent(normalizer.getFinalText());
+    private void initFactories() throws AlignmentFactoryException {
+        textAlignerFactory = FactoryProducer.getFactory("Aligner");
+        alignmentScoreFactory = FactoryProducer.getFactory("Score");
+    }
 
-			for (Paragraph secondParagraph : secondFile.getParagraphs()) {
+    public List<AlignmentPair> getParagraphPairs()
+        throws AlignmentParserException, AlignmentFactoryException {
 
-				normalizer.setInitialText(secondParagraph.getParagraphContent());
-				normalizer.normalize();
-				secondParagraph.setParagraphContent(normalizer.getFinalText());
+        initParsers();
+        initFactories();
 
-				for (String algorithm : textAlignerFactory.getAlgorithms()) {
+        ArrayList<AlignmentPair> result = new ArrayList<AlignmentPair>();
 
-					TextAligner textAligner;
-					try {
-						textAligner =
-								textAlignerFactory.getTextAligner(
-										algorithm,
-										firstParagraph.getParagraphContent(),
-										secondParagraph.getParagraphContent());
+        for (Paragraph firstParagraph : firstFile.getParagraphs()) {
 
-						textAligner.align();
-					} catch (AlignmentFactoryException err) {
-						continue;
-					}
+            normalizer.setInitialText(firstParagraph.getParagraphContent());
+            normalizer.normalize();
+            firstParagraph.setParagraphContent(normalizer.getFinalText());
 
-					String firstAlignment =
-							firstParagraph.getParagraphContent().substring(
-									textAligner.getFirstStart());
+            for (Paragraph secondParagraph : secondFile.getParagraphs()) {
 
-					String secondAlignment =
-							secondParagraph.getParagraphContent().substring(
-									textAligner.getSecondStart());
+                normalizer.setInitialText(secondParagraph.getParagraphContent());
+                normalizer.normalize();
+                secondParagraph.setParagraphContent(normalizer.getFinalText());
 
-					for (String calculator : alignmentScoreFactory.getAlgorithms()) {
+                for (String algorithm : textAlignerFactory.getAlgorithms()) {
 
-						TextMatchScore scoreCalculator;
-						try {
-							scoreCalculator =
-									alignmentScoreFactory.getTextMatchScore(
-											calculator,
-											firstAlignment,
-											secondAlignment);
-						} catch (AlignmentFactoryException err) {
-							continue;
-						}
+                    TextAligner textAligner;
+                    try {
+                        textAligner =
+                            textAlignerFactory.getTextAligner(
+                                    algorithm,
+                                    firstParagraph.getParagraphContent(),
+                                    secondParagraph.getParagraphContent());
 
-						try {
-							double score = scoreCalculator.getScore();
-							if( score > 0)
-								result.add(new AlignmentPair(
-										firstParagraph,
-										secondParagraph,
-										textAligner.getFirstStart(),
-										textAligner.getSecondStart(),
-										score));
-						} catch (AlignmentScoreException err) {
-						}
-					}
-				}
-			}
-		}
+                        textAligner.align();
+                    } catch (AlignmentFactoryException err) {
+                        continue;
+                    }
 
-		result.sort((a1, a2) -> new Double(a1.getScore()).compareTo(new Double(a2.getScore())));
-		removeDuplicates(result);
-		return result;
-	}
+                    String firstAlignment =
+                        firstParagraph.getParagraphContent().substring(
+                                textAligner.getFirstStart());
 
-	private static void removeDuplicates(List<AlignmentPair> list) {
+                    String secondAlignment =
+                        secondParagraph.getParagraphContent().substring(
+                                textAligner.getSecondStart());
 
-		for( int i = 0; i < list.size(); ++i){
+                    for (String calculator : alignmentScoreFactory.getAlgorithms()) {
 
-			AlignmentPair iPair = list.get(i);
-			for( int j = i+1; j < list.size(); ++j){
+                        TextMatchScore scoreCalculator;
+                        try {
+                            scoreCalculator =
+                                alignmentScoreFactory.getTextMatchScore(
+                                        calculator,
+                                        firstAlignment,
+                                        secondAlignment);
+                        } catch (AlignmentFactoryException err) {
+                            continue;
+                        }
 
-				AlignmentPair jPair = list.get(j);
-				if( iPair.getFirstParagraph() == jPair.getFirstParagraph() ||
-						iPair.getSecondParagraph() == jPair.getSecondParagraph() ){
-					list.remove( j );
-					--j;
-				}
+                        try {
+                            double score = scoreCalculator.getScore();
+                            if (score > 0) {
+                                result.add(new AlignmentPair(
+                                            firstParagraph,
+                                            secondParagraph,
+                                            textAligner.getFirstStart(),
+                                            textAligner.getSecondStart(),
+                                            score));
+                            }
+                        } catch (AlignmentScoreException err) {
+                        }
+                    }
+                }
+            }
+        }
 
-			}
-		}
-	}
+        result.sort((a1, a2) -> new Double(a1.getScore()).compareTo(new Double(a2.getScore())));
+        removeDuplicates(result);
+        return result;
+    }
 
-	
+    private void removeDuplicates(List<AlignmentPair> list) {
 
+        for (int i = 0; i < list.size(); ++i) {
+            AlignmentPair iPair = list.get(i);
+
+            for (int j = i + 1; j < list.size(); ++j) {
+                AlignmentPair jPair = list.get(j);
+
+                if (iPair.getFirstParagraph() == jPair.getFirstParagraph() ||
+                        iPair.getSecondParagraph() == jPair.getSecondParagraph()) {
+                    list.remove(j);
+                    --j;
+                }
+            }
+        }
+    }
 }

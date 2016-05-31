@@ -2,6 +2,7 @@ package parser;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
@@ -17,9 +18,9 @@ public final class ParserXMLFile {
 
     private List<Paragraph> paragraphs;
 
-    public ParserXMLFile (String fileName) throws AlignmentParserException {
+    public ParserXMLFile (Path filePath) throws AlignmentParserException {
         paragraphs = new ArrayList<Paragraph>();
-        findParagraphs(fileName);
+        findParagraphs(filePath);
     }
 
     /**
@@ -28,13 +29,11 @@ public final class ParserXMLFile {
      * through them, and creates a list of paragraph objects, containing the
      * paragraph ID and contents.
      */
-    private void findParagraphs(String fileName) throws AlignmentParserException {
+    private void findParagraphs(Path filePath) throws AlignmentParserException {
         try {
-            File inputFile = new File(fileName);
-
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(inputFile);
+            Document doc = dBuilder.parse(filePath.toFile());
             doc.getDocumentElement().normalize();
 
             NodeList allTags = doc.getElementsByTagName("p");
