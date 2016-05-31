@@ -1,3 +1,5 @@
+package transfer.ip.IP;
+
 import java.io.IOException;
 
 public class Fragmentare {
@@ -104,10 +106,10 @@ public class Fragmentare {
 							tag_aux[contor_tag].setDenumire(inchidere[j]);
 							if(aux_spargere.length==2)
 								tag_aux[contor_tag].setProprietate(aux_spargere[1]);
-							tag_aux[contor_tag].setPozitie_linie_inceput(pozitie_inceput_deschis[i]-1);
-							tag_aux[contor_tag].setPozitie_linie_inceput_1(pozitie_inceput_deschis[i]+deschidere[i].length()+1);
-							tag_aux[contor_tag].setPozitie_linie_sfarsit(pozitie_inceput_inchis[j]-2);
-							tag_aux[contor_tag].setPozitie_linie_sfarsit_1(pozitie_inceput_inchis[j]+inchidere[j].length()+2);
+							tag_aux[contor_tag].setPozitie_inceput_linie_inceput(pozitie_inceput_deschis[i]-1);
+							tag_aux[contor_tag].setPozitie_sfarsit_linie_inceput(pozitie_inceput_deschis[i]+deschidere[i].length());
+							tag_aux[contor_tag].setPozitie_inceput_linie_sfarsit(pozitie_inceput_inchis[j]-2);
+							tag_aux[contor_tag].setPozitie_sfarsit_linie_sfarsit(pozitie_inceput_inchis[j]+inchidere[j].length());
 							tag_aux[contor_tag].setPozitieInceput(pozitie_linie_deschis[i]);
 							tag_aux[contor_tag].setPozitieFinal(pozitie_linie_inchis[j]);
 							contor_tag++;
